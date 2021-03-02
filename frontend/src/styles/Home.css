@@ -1,0 +1,14 @@
+.video {
+    /* object-fit: cover; */
+    width: 100%;    
+    max-height: 100vh;
+    /* display: none */
+}
+
+.overlay {
+    /* display: grid; */
+    /* place-items: center; */
+    /* object-fit: cover; */
+    /* max-height: 10%; */
+    /* max-width: 10%; */
+}
