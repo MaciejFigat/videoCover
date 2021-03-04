@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import fogMountain from '../assets/fogMountain.mp4'
 import Burger from '../components/Burger'
-import '../styles/Home.css'
+import '../styles/Home.scss'
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -16,7 +16,7 @@ const Home = () => {
 
   return (
     <>
-      <section className='showcase'>
+      <section className={`showcase ${menuOpen}`}>
         <header>
           <h2 className='logo'>Logo</h2>
 

@@ -12,6 +12,7 @@
     background: #111;
     color: #fff;
     z-index: 2;
+    transition: 0.4s;
 }
 .showcase header {
     top: 0;
@@ -38,6 +39,11 @@
     height: 100%;
     opacity: 0.79;
 }
+.showcase.true {
+    right: 300px;
+    transition: 0.4s;
+}
+
 /* here is the parent of the navigation Burger */
 .toggle {
     position: relative;
@@ -49,8 +55,28 @@
 }
 
 .menu {
-    
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+.menu ul {
+    position: relative;
+    list-style: none;    
+}
+.menu ul li a{
+   text-decoration: none;
+   font-size: 24px;
+   color: #111;     
+}
+.menu ul li a:hover{    
+    color: rgb(32, 135, 175);     
+ }
+
 
 .overlay {
     position: absolute;
@@ -132,7 +158,7 @@
 
 /* media queries */
 
-@media(max-width: 991px) {
+@media(max-width: 798px) {
     .showcase, .showcase header {
         padding: 40px;
     }
