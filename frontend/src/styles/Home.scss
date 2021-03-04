@@ -42,6 +42,9 @@
 .showcase.true {
     right: 300px;
     transition: 0.4s;
+    @media(max-width: 798px) {
+        right: 280px;
+        }
 }
 
 /* here is the parent of the navigation Burger */
@@ -63,6 +66,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media(max-width: 798px) {
+        width: 280px;
+        }
 }
 .menu ul {
     position: relative;
@@ -86,11 +92,22 @@
     height: 100%;
     background-color: #ceb265;
     mix-blend-mode: overlay;
+    transition: 0.7s;
+}
+.overlay.true {
+    background-color: #924518;
+    transition: 0.7s;
 }
 
 .text {
     position: relative;
     z-index: 3;
+    transition: 0.7s;
+}
+.text.true {
+    opacity: 0.1;
+    // z-index: -10;
+    transition: 0.7s;
 }
 .text h2{
    font-size: 4em;

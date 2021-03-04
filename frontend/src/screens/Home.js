@@ -27,8 +27,8 @@ const Home = () => {
 
         <video className='video' src={fogMountain} muted loop autoPlay></video>
 
-        <div className='overlay'></div>
-        <div className='text'>
+        <div className={`overlay ${menuOpen}`}></div>
+        <div className={`text ${menuOpen}`}>
           <h2>Live, love</h2>
           <h3>Eat The capability to implement.</h3>
           <p>
@@ -59,7 +59,7 @@ const Home = () => {
       <div className='menu'>
         <ul>
           <li>
-            <a href='#'>Imagine a combination</a>
+            <a href='#'>Imagine </a>
           </li>
           <li>
             <a href='#'>Accepted buzzword</a>
