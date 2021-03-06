@@ -49,12 +49,21 @@
 
 /* here is the parent of the navigation Burger */
 .toggle {
-    position: relative;
-    /* width: 60px; */
-    /* height: 60px; */
+    // position: relative;
+    position: absolute;
+    // z-index: 11;
+    right: 0;
+    margin-right: 20px;
+
+    // top: 120;
+    width: 60px; 
+    height: 60px; 
     cursor: pointer;
-    /* display: grid;
-    align-items: center; */
+    display: grid;
+    align-items: center; 
+    justify-content: center;
+    background-color: rgb(36, 81, 206);
+    border-radius: 50%;
 }
 
 .menu {
@@ -105,7 +114,7 @@
     transition: 0.7s;
 }
 .text.true {
-    opacity: 0.1;
+    opacity: 0;
     // z-index: -10;
     transition: 0.7s;
 }
