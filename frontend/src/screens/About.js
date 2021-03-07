@@ -16,12 +16,14 @@ const About = () => {
 
         <div className={`overlay ${menuOpen}`}></div>
         <div className={`text ${menuOpen}`}>
-          <h2>Live, love</h2>
-          <h3>Eat The capability to implement.</h3>
+          <h2>About things</h2>
+          <h3>Is it more important for something to be customer-directed?</h3>
           <p>
-            Without C2C, you will lack architectures. Without
-            micro-resource-constrained performance, you will lack synergies. If
-            you transition globally, you may also mesh iteravely.
+            Without efficient, transparent bloatware, you will lack
+            affiliate-based compliance. The capacity to enable perfectly leads
+            to the capacity to harness without devaluing our capability to
+            implement wirelessly leads to the capacity to synthesize
+            interactively.
           </p>
           <a href='#'>Best Quality</a>
         </div>

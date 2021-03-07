@@ -1,8 +1,6 @@
 import './styles/App.css'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Home from './screens/Home'
-import About from './screens/About'
-import Misc from './screens/Misc'
+import { Home, About, Misc } from './screens'
 import Menu from './layout/Menu'
 import Burger from './components/Burger'
 function App() {

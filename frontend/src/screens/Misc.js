@@ -16,12 +16,16 @@ const Misc = () => {
 
         <div className={`overlay ${menuOpen}`}></div>
         <div className={`text ${menuOpen}`}>
-          <h2>Live, love</h2>
-          <h3>Eat The capability to implement.</h3>
+          <h2>Misc Destination</h2>
+          <h3>
+            Our end-to-end feature set is second to none, but our non-complex
+            administration and newbie-proof use.{' '}
+          </h3>
           <p>
-            Without C2C, you will lack architectures. Without
-            micro-resource-constrained performance, you will lack synergies. If
-            you transition globally, you may also mesh iteravely.
+            Without macro-vertical CAE, you will lack research and development.
+            Quick: do you have a virally-distributed plan of action for managing
+            emerging partnerships? Without data hygiene supervising, you will
+            lack versioning.
           </p>
           <a href='#'>Best Quality</a>
         </div>
