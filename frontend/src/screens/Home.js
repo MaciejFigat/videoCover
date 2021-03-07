@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import fogMountain from '../assets/fogMountain.mp4'
 import Burger from '../components/Burger'
+import Menu from '../layout/Menu'
 import '../styles/Home.scss'
+import { NavLink } from 'react-router-dom'
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -16,13 +18,12 @@ const Home = () => {
 
   return (
     <>
+      <div className={`toggle ${menuOpen}`} onClick={handleClickMenu}>
+        <Burger menuOpen={menuOpen} />
+      </div>
       <section className={`showcase ${menuOpen}`}>
         <header>
           <h2 className='logo'>Logo</h2>
-
-          <div className='toggle' onClick={handleClickMenu}>
-            <Burger menuOpen={menuOpen} />
-          </div>
         </header>
 
         <video className='video' src={fogMountain} muted loop autoPlay></video>
@@ -56,25 +57,6 @@ const Home = () => {
           </li>
         </ul>
       </section>
-      <div className='menu'>
-        <ul>
-          <li>
-            <a href='#'>Imagine </a>
-          </li>
-          <li>
-            <a href='#'>Accepted buzzword</a>
-          </li>
-          <li>
-            <a href='#'>Customer-directed</a>
-          </li>
-          <li>
-            <a href='#'>Quality driven</a>
-          </li>
-          <li>
-            <a href='#'>Best Quality</a>
-          </li>
-        </ul>
-      </div>
     </>
   )
 }

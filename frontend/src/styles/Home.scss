@@ -43,19 +43,17 @@
     right: 300px;
     transition: 0.4s;
     @media(max-width: 798px) {
-        right: 280px;
+        right: 260px;
         }
 }
 
 /* here is the parent of the navigation Burger */
 .toggle {
-    // position: relative;
     position: absolute;
-    // z-index: 11;
+    z-index: 11;
     right: 0;
     margin-right: 20px;
-
-    // top: 120;
+    top: 20px;
     width: 60px; 
     height: 60px; 
     cursor: pointer;
@@ -64,6 +62,11 @@
     justify-content: center;
     background-color: rgb(36, 81, 206);
     border-radius: 50%;
+    transition: 0.7s;
+}
+.toggle.true {
+    background-color: #92185b;
+    transition: 0.7s;
 }
 
 .menu {
@@ -76,7 +79,7 @@
     align-items: center;
     justify-content: center;
     @media(max-width: 798px) {
-        width: 280px;
+        width: 260px;
         }
 }
 .menu ul {
@@ -112,11 +115,13 @@
     position: relative;
     z-index: 3;
     transition: 0.7s;
-}
+    }
 .text.true {
-    opacity: 0;
-    // z-index: -10;
+    opacity: 0.5;
     transition: 0.7s;
+    @media(max-width: 798px) {
+        opacity: 0;
+        }
 }
 .text h2{
    font-size: 4em;
