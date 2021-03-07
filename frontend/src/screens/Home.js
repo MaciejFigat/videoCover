@@ -1,26 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react'
 import fogMountain from '../assets/fogMountain.mp4'
 import Burger from '../components/Burger'
 import Menu from '../layout/Menu'
 import '../styles/Home.scss'
 import { NavLink } from 'react-router-dom'
-
+import { useSelector } from 'react-redux'
 const Home = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
-
-  const handleClickMenu = () => {
-    if (menuOpen === false) {
-      setMenuOpen(true)
-    } else {
-      setMenuOpen(false)
-    }
-  }
+  const menuState = useSelector((state) => state.menuState)
+  const { menuOpen } = menuState
 
   return (
     <>
-      <div className={`toggle ${menuOpen}`} onClick={handleClickMenu}>
-        <Burger menuOpen={menuOpen} />
-      </div>
       <section className={`showcase ${menuOpen}`}>
         <header>
           <h2 className='logo'>Logo</h2>

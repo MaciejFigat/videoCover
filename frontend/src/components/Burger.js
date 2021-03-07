@@ -8,7 +8,7 @@ const Burger = () => {
   const menuState = useSelector((state) => state.menuState)
   const { menuOpen } = menuState
 
-  const handleClick = () => {
+  const handleClickMenu = () => {
     if (menuOpen === true) {
       dispatch(closeMenu())
     } else if (menuOpen === false) {
@@ -17,10 +17,12 @@ const Burger = () => {
   }
 
   return (
-    <div className='burger'>
-      <div className={`line1 ${menuOpen}`}></div>
-      <div className={`line2 ${menuOpen}`}></div>
-      <div className={`line3 ${menuOpen}`}></div>
+    <div className={`toggle ${menuOpen}`} onClick={handleClickMenu}>
+      <div className='burger'>
+        <div className={`line1 ${menuOpen}`}></div>
+        <div className={`line2 ${menuOpen}`}></div>
+        <div className={`line3 ${menuOpen}`}></div>
+      </div>
     </div>
   )
 }

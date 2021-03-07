@@ -4,6 +4,7 @@ import Home from './screens/Home'
 import About from './screens/About'
 import Misc from './screens/Misc'
 import Menu from './layout/Menu'
+import Burger from './components/Burger'
 function App() {
   return (
     <Router>
@@ -11,6 +12,7 @@ function App() {
       <Route path='/about' component={About} />
       <Route path='/misc' component={Misc} />
       <Menu />
+      <Burger />
     </Router>
   )
 }
