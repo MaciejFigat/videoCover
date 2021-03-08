@@ -5,12 +5,35 @@ import Menu from '../layout/Menu'
 import '../styles/Home.scss'
 import { NavLink } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import { motion } from 'framer-motion'
+
+const pageVariants = {
+  in: {
+    opacity: 1,
+    x: 0,
+  },
+  out: {
+    opacity: 0,
+    x: '-100vw',
+  },
+}
+const pageTransition = {
+  // type: 'tween',
+  duration: 0.7,
+}
+
 const Home = () => {
   const menuState = useSelector((state) => state.menuState)
   const { menuOpen } = menuState
 
   return (
-    <>
+    <motion.div
+      initial='out'
+      animate='in'
+      exit='out'
+      variants={pageVariants}
+      transition={pageTransition}
+    >
       <section className={`showcase ${menuOpen}`}>
         <header>
           <h2 className='logo'>Logo</h2>
@@ -47,7 +70,7 @@ const Home = () => {
           </li>
         </ul>
       </section>
-    </>
+    </motion.div>
   )
 }
 
