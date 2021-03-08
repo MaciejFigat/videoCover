@@ -15,8 +15,8 @@ const pageVariants = {
   },
 }
 const pageTransition = {
-  // type: 'tween',
-  duration: 0.7,
+  type: 'tween',
+  duration: 1,
 }
 
 const About = () => {
@@ -27,10 +27,11 @@ const About = () => {
     <motion.div
       initial='out'
       animate='in'
-      exit='out'
+      exit='in'
       variants={pageVariants}
       transition={pageTransition}
     >
+      <h2 className={`logoOnMenu ${menuOpen}`}>About</h2>
       <section className={`showcase ${menuOpen}`}>
         <header>
           <h2 className='logo'>About</h2>
@@ -43,9 +44,7 @@ const About = () => {
           <p>
             Without efficient, transparent bloatware, you will lack
             affiliate-based compliance. The capacity to enable perfectly leads
-            to the capacity to harness without devaluing our capability to
-            implement wirelessly leads to the capacity to synthesize
-            interactively.
+            to the capacity to harness.
           </p>
           <a href='#'>Best Quality</a>
         </div>

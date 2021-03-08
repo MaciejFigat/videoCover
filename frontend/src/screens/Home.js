@@ -18,8 +18,8 @@ const pageVariants = {
   },
 }
 const pageTransition = {
-  // type: 'tween',
-  duration: 0.7,
+  type: 'tween',
+  duration: 1,
 }
 
 const Home = () => {
@@ -30,10 +30,11 @@ const Home = () => {
     <motion.div
       initial='out'
       animate='in'
-      exit='out'
+      exit='in'
       variants={pageVariants}
       transition={pageTransition}
     >
+      <h2 className={`logoOnMenu ${menuOpen}`}>Logo</h2>
       <section className={`showcase ${menuOpen}`}>
         <header>
           <h2 className='logo'>Logo</h2>

@@ -15,8 +15,8 @@ const pageVariants = {
   },
 }
 const pageTransition = {
-  // type: 'tween',
-  duration: 0.7,
+  type: 'tween',
+  duration: 1,
 }
 
 const Misc = () => {
@@ -27,10 +27,11 @@ const Misc = () => {
     <motion.div
       initial='out'
       animate='in'
-      exit='out'
+      exit='in'
       variants={pageVariants}
       transition={pageTransition}
     >
+      <h2 className={`logoOnMenu ${menuOpen}`}>Misc</h2>
       <section className={`showcase ${menuOpen}`}>
         <header>
           <h2 className='logo'>Misc</h2>
@@ -38,16 +39,10 @@ const Misc = () => {
 
         <div className={`overlay ${menuOpen}`}></div>
         <div className={`text ${menuOpen}`}>
-          <h2>Misc Destination</h2>
-          <h3>
-            Our end-to-end feature set is second to none, but our non-complex
-            administration and newbie-proof use.{' '}
-          </h3>
+          <h2>Research</h2>
+          <h3>Our end-to-end feature set is second to none. </h3>
           <p>
             Without macro-vertical CAE, you will lack research and development.
-            Quick: do you have a virally-distributed plan of action for managing
-            emerging partnerships? Without data hygiene supervising, you will
-            lack versioning.
           </p>
           <a href='#'>Best Quality</a>
         </div>

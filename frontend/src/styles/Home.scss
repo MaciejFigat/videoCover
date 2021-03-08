@@ -29,7 +29,22 @@
     text-transform: uppercase;
     cursor: pointer;
 }
-
+.logoOnMenu {
+    text-transform: uppercase;
+    cursor: pointer;
+    position: absolute;
+    color: #333;
+    top: 0;
+    z-index: 3;
+    right: 0;
+    padding: 40px 100px;
+    transition: 1s;
+    opacity: 0;
+}
+.logoOnMenu.true { 
+    transition: 1s;
+    opacity: 0.9;
+}
 .showcase video {
     position: absolute;
     top: 0;
