@@ -24,8 +24,16 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
+    
 }
 .logo {
+//     position: absolute;
+//     color: #333;
+//     top: 0;
+//     z-index: 3;
+//    left: 0;
+//     padding: 40px 100px;
+    
     text-transform: uppercase;
     cursor: pointer;
 }
@@ -128,6 +136,7 @@
 }
 
 .text {
+    
     position: relative;
     z-index: 3;
     transition: 0.7s;
@@ -207,7 +216,7 @@
 
 @media(max-width: 798px) {
     .showcase, .showcase header {
-        padding: 40px;
+        padding: 20px;
     }
     .text h2 {
         font-size: 3em;

@@ -40,11 +40,10 @@ const About = () => {
           <div className={`overlay ${menuOpen}`}></div>
           <div className={`text ${menuOpen}`}>
             <h2>About things</h2>
-            <h3>Is it more important for something to be customer-directed?</h3>
+            <h3>Is it more important for something.</h3>
             <p>
               Without efficient, transparent bloatware, you will lack
-              affiliate-based compliance. The capacity to enable perfectly leads
-              to the capacity to harness.
+              affiliate-based compliance.
             </p>
             <a href='#'>Best Quality</a>
           </div>
