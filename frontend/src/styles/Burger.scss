@@ -7,10 +7,7 @@
     background-color: whitesmoke;
     margin: 5px;
     transition: all 0.3s ease;
-    // @media(max-width: 798px) {
-    // width: 25px;
-    // height: 3px;
-    // }
+    
   }
   .burger {
     display: block;
@@ -21,7 +18,7 @@
     height: 4.5px;
     
     transform: rotate(-45deg) translate(-4.95px, -2.75px);
-    // transform: rotate(-45deg) translate(-4.65px, 8px);
+   
     @media(max-width: 798px) {
     // transform: rotate(-45deg) translate(-5px, 6px);
     }

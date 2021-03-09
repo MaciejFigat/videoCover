@@ -36,6 +36,16 @@ const Menu = () => {
               Quality driven
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              exact
+              to='/contact'
+              className='nav_link'
+              activeClassName='nav_link_active'
+            >
+              Contact
+            </NavLink>
+          </li>
         </ul>
       </div>
     </>
