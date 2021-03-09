@@ -62,17 +62,17 @@ const Home = () => {
           <ul className='social'>
             <li>
               <a href='#'>
-                <i className='fas fa-chevron-circle-left'></i>
+                <i className='fab fa-github-square'></i>
               </a>
             </li>
             <li>
               <a href='#'>
-                <i className='fas fa-chevron-circle-left'></i>
+                <i className='fab fa-linkedin'></i>
               </a>
             </li>
             <li>
               <a href='#'>
-                <i className='fas fa-chevron-circle-left'></i>
+                <i className='fas fa-envelope-square'></i>
               </a>
             </li>
           </ul>

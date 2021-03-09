@@ -1,5 +1,4 @@
 import React from 'react'
-import fogMountain from '../assets/fogMountain.mp4'
 import { useSelector } from 'react-redux'
 import '../styles/Home.scss'
 import { motion } from 'framer-motion'

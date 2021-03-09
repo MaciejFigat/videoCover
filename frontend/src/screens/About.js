@@ -1,5 +1,4 @@
 import React from 'react'
-import fogMountain from '../assets/fogMountain.mp4'
 import { useSelector } from 'react-redux'
 import '../styles/Home.scss'
 import { motion } from 'framer-motion'
@@ -36,7 +35,6 @@ const About = () => {
           <header>
             <h2 className='logo'>About</h2>
           </header>
-
           <div className={`overlay ${menuOpen}`}></div>
           <div className={`text ${menuOpen}`}>
             <h2>About things</h2>
