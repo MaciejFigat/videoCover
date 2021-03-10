@@ -1,29 +1,29 @@
 import React, { useState, useEffect } from 'react'
 
-// import { ResponsiveDiv, ContainerDiv } from '../styles/responsiveContainer'
-// import { StyledImage } from '../styles/imageStyles'
-
 import { useDispatch, useSelector } from 'react-redux'
 import { messageChange, messageReset } from '../actions/messageActions'
 import emailjs from 'emailjs-com'
-import dotenv from 'dotenv'
+// import dotenv from 'dotenv'
+
 const ContactForm = () => {
   const dispatch = useDispatch()
 
-  const userMessage = useSelector((state) => state.userMessage.userMessageSent)
+  const userMessageSaved = useSelector(
+    (state) => state.userMessage.userMessageSent
+  )
   const {
     name: userName,
     email: userEmail,
     message: userMessageContent,
-  } = userMessage
+  } = userMessageSaved
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
-  const [message, setUserMessage] = useState('')
+  const [formMessage, setFormMessage] = useState('')
 
   const messageSendHandler = (e) => {
     e.preventDefault()
-    dispatch(messageChange({ name, email, message }))
+    dispatch(messageChange({ name, email, message: formMessage }))
   }
   const messageResetHandler = (e) => {
     e.preventDefault()
@@ -36,9 +36,10 @@ const ContactForm = () => {
   const TEMPLATE_ID = process.env.REACT_APP_YOUR_TEMPLATE_ID
 
   const templateParams = {
-    from_name: 'John Doe',
-    to_name: 'Potter Hare',
-    message_html: '<p>Welcome to EmailJS!</p>',
+    from_name: userName,
+    to_name: 'Maciej',
+    message: userMessageContent,
+    reply_to: userEmail,
   }
 
   const emailJSSendHandler = (e) => {
@@ -58,12 +59,12 @@ const ContactForm = () => {
   //
 
   useEffect(() => {
-    if (userMessage) {
+    if (userMessageSaved) {
       setName(userName)
       setEmail(userEmail)
-      setUserMessage(userMessageContent)
+      setFormMessage(userMessageContent)
     }
-  }, [userMessage, userEmail, userMessageContent, userName])
+  }, [userMessageSaved, userEmail, userMessageContent, userName])
 
   return (
     <>
@@ -94,9 +95,9 @@ const ContactForm = () => {
             <label> Wiadomość:</label>
             <textarea
               className='contact_field_content messageField'
-              value={message}
+              value={formMessage}
               placeholder='Wpisz wiadomość'
-              onChange={(e) => setUserMessage(e.target.value)}
+              onChange={(e) => setFormMessage(e.target.value)}
             ></textarea>
           </div>
           <button className='contact_button' onClick={messageSendHandler}>

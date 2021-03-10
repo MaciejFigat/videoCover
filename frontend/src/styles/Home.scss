@@ -1,5 +1,4 @@
 
-
 .showcase {
     position: absolute;
     right: 0;
@@ -136,11 +135,15 @@
     transition: 0.7s;
     }
 .text.true {
-    opacity: 0.5;
-    transition: 0.7s;
+        
     @media(max-width: 798px) {
         opacity: 0;
         }
+    @media(min-width: 799px) {
+            opacity: 0.5;
+            margin-left: 300px;
+            transition: 0.7s;
+            }
 }
 .text h2{
    font-size: 4em;
