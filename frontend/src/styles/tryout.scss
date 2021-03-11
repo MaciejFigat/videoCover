@@ -1,0 +1,124 @@
+// .contact_form_container {
+//     // display: grid;
+//     // place-items: center;
+//     // width: 100%;
+    
+//   display: flex;
+//   min-height: 60vh;
+//   justify-content: center;
+//   align-items: center;
+
+// }
+// .contact_form {
+//     display: flex;
+//     flex-direction: column;
+//     // margin-top: 1.25rem;
+//     width: 60%;
+//     margin: 0 auto;
+//   }
+//   .contact_field {
+//     display: flex;
+//     flex-direction: column;
+//     text-align: left;
+//   }
+// // input {
+// //     outline: none;
+// //     border: none;
+// // }
+// // form {
+// //     display: block;
+// //     margin-top: 0em;
+// // }
+// // .bg-contact2 {
+// //     width: 100%;
+// //     background-repeat: no-repeat;
+// //     background-position: center center;
+// //     background-size: cover;
+// // }
+// // element.style {
+// //     background-image: url(images/bg-01.jpg);
+// // }
+// .wrap-input2 {
+//     width: 100%;
+//     position: relative;
+//     border-bottom: 2px solid #adadad;
+//     margin-bottom: 37px;
+// }
+// // .focus-input2::after {
+// //     // content: attr(data-placeholder);
+// //     content: 'name';
+// //     display: block;
+// //     width: 100%;
+// //     position: absolute;
+// //     top: 0px;
+// //     left: 0;
+// //     font-family: Poppins-Regular;
+// //     font-size: 13px;
+// //     color: #999999;
+// //     line-height: 1.2;
+// //     -webkit-transition: all 0.4s;
+// //     -o-transition: all 0.4s;
+// //     -moz-transition: all 0.4s;
+// //     transition: all 0.4s;
+// // }
+// input.input2 + .focus-input2::after {
+//     top: 16px;
+//     left: 0;
+// }
+// .focus-input2 {
+//     position: absolute;
+//     display: block;
+//     width: 100%;
+//     height: 100%;
+//     top: 0;
+//     left: 0;
+//     pointer-events: none;
+// }
+// .focus-input2::before {
+//     content: "";
+//     display: block;
+//     position: absolute;
+//     bottom: 2px;
+//     left: 0;
+//     width: 0;
+//     height: 2px;
+//     -webkit-transition: all 0.4s;
+//     -o-transition: all 0.4s;
+//     -moz-transition: all 0.4s;
+//     transition: all 0.4s;
+//     background: rgba(219,21,99,1);
+//     background: -webkit-linear-gradient(
+// 45deg
+// , #d5007d, #e53935);
+//     background: -o-linear-gradient(45deg, #d5007d, #e53935);
+//     background: -moz-linear-gradient(45deg, #d5007d, #e53935);
+//     background: linear-gradient(
+// 45deg
+// , #d5007d, #e53935);
+// }
+// .contact_field_content {
+//     outline: none;
+//     border: none;   
+//     color: rgba(245, 245, 245, 0.712);
+//     background: none;
+//     line-height: 1.2;
+//     text-align: start;
+//     cursor: text;
+//     display: block;
+//     width: 100%;
+//     height: 45px;
+//     font-size: 15px;
+//     line-height: 1.2;
+//     border-bottom: 2px solid #adadad;
+   
+//     min-width: 600px;
+//     @media(max-width: 798px) {
+//         min-width: 300px;
+      
+//         }
+// }
+
+// .messageField {
+//     min-height: 15vh;
+    
+// }

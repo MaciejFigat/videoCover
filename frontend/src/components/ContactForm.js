@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { messageChange, messageReset } from '../actions/messageActions'
 import emailjs from 'emailjs-com'
-// import dotenv from 'dotenv'
+import '../styles/Form.scss'
 
 const ContactForm = () => {
   const dispatch = useDispatch()
@@ -72,41 +72,43 @@ const ContactForm = () => {
       <div className='contact_form_container'>
         <form className='contact_form'>
           <div className='contact_field'>
-            <label> Imię lub nazwa firmy:</label>
+            <label> name: </label>
             <input
               className='contact_field_content'
               type='text'
               value={name}
-              placeholder='Wpisz swoje imię/nazwę podmiotu'
+              placeholder='your name'
               onChange={(e) => setName(e.target.value)}
             />
+            <span className='focus-input2' data-placeholder='NAME'></span>
           </div>
           <div className='contact_field'>
-            <label> Email:</label>
+            <label>email:</label>
             <input
               className='contact_field_content'
               type='email'
               value={email}
-              placeholder='Wpisz email kontaktowy'
+              placeholder='your email'
               onChange={(e) => setEmail(e.target.value)}
             />
+            <span className='focus-input2' data-placeholder='NAME'></span>
           </div>
           <div className='contact_field'>
-            <label> Wiadomość:</label>
+            <label> message:</label>
             <textarea
               className='contact_field_content messageField'
               value={formMessage}
-              placeholder='Wpisz wiadomość'
+              placeholder='message me'
               onChange={(e) => setFormMessage(e.target.value)}
             ></textarea>
           </div>
           <button className='contact_button' onClick={messageSendHandler}>
-            Wyślij wiadomość
+            Send
           </button>
           <button className='contact_button' onClick={messageResetHandler}>
-            Zresetuj wiadomość
+            reset
           </button>
-          emailJSSendHandler
+
           <button className='contact_button' onClick={emailJSSendHandler}>
             Send an email
           </button>

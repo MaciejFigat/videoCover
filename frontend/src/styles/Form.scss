@@ -1,0 +1,70 @@
+.contact_form_container {
+    display: grid;
+    place-items: center;
+    // width: 100%;
+    
+//   display: flex;
+//   min-height: 60vh;
+//   justify-content: center;
+//   align-items: center;
+
+}
+.contact_form {
+    // display: flex;
+    // flex-direction: column;
+    
+    width: 60%;
+    margin: 0 auto;
+    @media (min-width: 640px) and (max-width: 798px) {
+        margin-top: 40px;
+    }
+  }
+  .contact_field {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+   }
+
+
+.contact_field_content {
+    outline: none;
+    border: none;   
+    color: rgba(245, 245, 245, 0.712);
+    background: none;
+    line-height: 1.2;
+    cursor: text;
+    height: 45px;
+    font-size: 15px;
+    line-height: 1.2;
+    border-bottom: 2px solid #adadad;
+    padding: 0.8rem 1.2rem;
+    min-width: 600px;
+    min-height: 100px;
+    margin-bottom: 20px;
+    @media (min-width: 1010px) and (max-width: 1127px) {
+        min-width: 500px;
+        }
+    @media (min-width: 887px) and (max-width: 1011px) {
+            min-width: 400px;
+            }
+    @media (min-width: 799px) and (max-width: 888px) {
+            min-width: 300px;
+            }
+    @media (min-width: 640px) and (max-width: 798px) {
+        min-width: 400px;
+        min-height: 40px;
+        line-height: 1;
+        margin-top: 10px;
+        }
+    @media(max-width: 639px) {
+        min-width: 250px;
+        min-height: 40px;
+        line-height: 1;
+        }
+}
+
+.messageField {
+    min-height: 25vh;
+    resize: none;
+    overflow-y: auto;
+}
