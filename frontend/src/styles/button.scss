@@ -1,15 +1,17 @@
 .send_button_wrapper {
-    display:flex;
-
+    display: flex;
+    justify-content: flex-end;  
+    width: 100%;
+    
 }
 
 .send_button {
     outline: none;
     border: none;
     padding: 10px 20px 30px; 
-    margin: 5px;  
+    margin: 5px 0px 5px 10px;  
     cursor: pointer;
-    width: 50%;
+    max-width: 20%;
     min-width: fit-content; 
     height: 3vh;
     min-height: 25px;
@@ -27,16 +29,12 @@
     background: rgb(168, 195, 183);
     transition: 0.5s;
     color:#333;
-    // outline: none;
-    // border: none;
+    
   }
   .send_button:active {
     background: rgb(20, 170, 108);
-    // outline: none;
-    // border: none;
   }
   
   .send_button:not(:focus) {
-    // outline: none;
-    // border: none;
+    
   }
