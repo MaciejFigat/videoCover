@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { messageChange, messageReset } from '../actions/messageActions'
 import emailjs from 'emailjs-com'
 import '../styles/Form.scss'
+import '../styles/button.scss'
 
 const ContactForm = () => {
   const dispatch = useDispatch()
@@ -21,7 +22,7 @@ const ContactForm = () => {
   const [email, setEmail] = useState('')
   const [formMessage, setFormMessage] = useState('')
 
-  const messageSendHandler = (e) => {
+  const messageSaveHandler = (e) => {
     e.preventDefault()
     dispatch(messageChange({ name, email, message: formMessage }))
   }
@@ -36,14 +37,15 @@ const ContactForm = () => {
   const TEMPLATE_ID = process.env.REACT_APP_YOUR_TEMPLATE_ID
 
   const templateParams = {
-    from_name: userName,
+    from_name: name,
     to_name: 'Maciej',
-    message: userMessageContent,
-    reply_to: userEmail,
+    message: formMessage,
+    reply_to: email,
   }
 
   const emailJSSendHandler = (e) => {
     e.preventDefault()
+    dispatch(messageChange({ name, email, message: formMessage }))
     emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, EMAILJS_ID).then(
       function (response) {
         console.log('SUCCESS!', response.status, response.text)
@@ -53,9 +55,7 @@ const ContactForm = () => {
       }
     )
   }
-  const dotenvConfig = (e) => {
-    e.preventDefault()
-  }
+
   //
 
   useEffect(() => {
@@ -101,21 +101,19 @@ const ContactForm = () => {
               placeholder='message me'
               onChange={(e) => setFormMessage(e.target.value)}
             ></textarea>
-          </div>
-          <button className='contact_button' onClick={messageSendHandler}>
-            Send
+          </div>{' '}
+        </form>
+        <div className='send_button_wrapper'>
+          <button className='send_button' onClick={messageSaveHandler}>
+            <i class='fas fa-save'></i>
           </button>
-          <button className='contact_button' onClick={messageResetHandler}>
+          <button className='send_button' onClick={messageResetHandler}>
             reset
           </button>
-
-          <button className='contact_button' onClick={emailJSSendHandler}>
-            Send an email
+          <button className='send_button' onClick={emailJSSendHandler}>
+            send
           </button>
-          <button className='contact_button' onClick={dotenvConfig}>
-            DotENV
-          </button>
-        </form>
+        </div>
       </div>
     </>
   )

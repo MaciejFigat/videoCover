@@ -1,0 +1,42 @@
+.send_button_wrapper {
+    display:flex;
+
+}
+
+.send_button {
+    outline: none;
+    border: none;
+    padding: 10px 20px 30px; 
+    margin: 5px;  
+    cursor: pointer;
+    width: 50%;
+    min-width: fit-content; 
+    height: 3vh;
+    min-height: 25px;
+    border-radius: 3px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Lato", sans-serif;
+    color: whitesmoke;
+    text-align: center;
+    background: #14010c;
+    box-shadow: 3px 3px 8px #3b2b08, -3px -3px 8px #2e2404;
+    transition: 0.5s;
+  }
+  .send_button:hover {
+    background: rgb(168, 195, 183);
+    transition: 0.5s;
+    color:#333;
+    // outline: none;
+    // border: none;
+  }
+  .send_button:active {
+    background: rgb(20, 170, 108);
+    // outline: none;
+    // border: none;
+  }
+  
+  .send_button:not(:focus) {
+    // outline: none;
+    // border: none;
+  }
