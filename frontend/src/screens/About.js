@@ -8,6 +8,7 @@ import {
   pageVariantsLogo,
   pageVariants,
 } from '../animations/transitions'
+import EmailJSTutorial from '../components/EmailJSTutorial'
 
 const About = () => {
   const menuState = useSelector((state) => state.menuState)
@@ -43,6 +44,7 @@ const About = () => {
               Without efficient, transparent bloatware, you will lack
               affiliate-based compliance.
             </p>
+            <EmailJSTutorial />
             <a href='#'>Best Quality</a>
           </div>
         </section>

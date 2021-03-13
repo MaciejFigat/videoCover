@@ -1,11 +1,6 @@
-##  Animated and asset heavy template
+##  Animated template
 
 
-### Assets
-
-Video by Tobias Bjørkli from Pexels
-
-https://www.pexels.com/video/take-natur-norge-fjell-4870147/
 
 ## Installation
 1. cd frontend
@@ -61,3 +56,8 @@ https://www.pexels.com/video/take-natur-norge-fjell-4870147/
 
 ### Styles 
 
+### Assets
+
+Video by Tobias Bjørkli from Pexels
+
+https://www.pexels.com/video/take-natur-norge-fjell-4870147/
