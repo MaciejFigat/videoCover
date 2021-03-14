@@ -1,12 +1,15 @@
 import React from 'react'
-// import ReactMarkdown from 'react-markdown'
-import SyntaxHighlighter from 'react-syntax-highlighter'
-import markdown from './markdownExamples.js'
-import { atelierDuneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import markdown from './codeExamples.js'
+import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism'
 const EmailJSTutorial = () => {
-  //   return <ReactMarkdown children={markdown} />
   return (
-    <SyntaxHighlighter language='javascript' style={atelierDuneDark}>
+    <SyntaxHighlighter
+      language='jsx'
+      style={darcula}
+      wrapLines={true}
+      lineProps={{ style: { wordBreak: 'break-all', whiteSpace: 'pre-wrap' } }}
+    >
       {markdown}
     </SyntaxHighlighter>
   )

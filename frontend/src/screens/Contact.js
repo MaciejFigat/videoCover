@@ -38,6 +38,7 @@ const About = () => {
           </header>
           <div className={`overlay ${menuOpen}`}></div>
           <div className={`text ${menuOpen}`}>
+            {' '}
             <ContactForm />
           </div>
         </section>

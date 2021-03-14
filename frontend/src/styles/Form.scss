@@ -1,6 +1,7 @@
 .contact_form_container {
     display: grid;
     place-items: center;
+    z-index: 4;
 }
 .contact_form {  
     width: 100%;

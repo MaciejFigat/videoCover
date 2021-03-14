@@ -141,6 +141,10 @@
     @media(max-width: 798px) {
         opacity: 0;
         }
+    @media(max-width: 360px) {
+            margin: 0;
+            transition: 0.7s;
+            }
   
     
 }
