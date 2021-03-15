@@ -1,8 +1,7 @@
 import React from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import markdown from './codeExamples.js'
 import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism'
-const EmailJSTutorial = () => {
+const EmailJSTutorial = ({ codeBlock }) => {
   return (
     <SyntaxHighlighter
       language='jsx'
@@ -10,7 +9,7 @@ const EmailJSTutorial = () => {
       wrapLines={true}
       lineProps={{ style: { wordBreak: 'break-all', whiteSpace: 'pre-wrap' } }}
     >
-      {markdown}
+      {codeBlock}
     </SyntaxHighlighter>
   )
 }

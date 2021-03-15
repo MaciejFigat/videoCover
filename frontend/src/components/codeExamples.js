@@ -1,19 +1,40 @@
-const jsxOne = `
-const emailJSSendHandler = (e) => {
-  e.preventDefault()
-  dispatch(messageChange({ name, email, message: formMessage }))
-  emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, EMAILJS_ID).then(
-    function (response) {
-      console.log('SUCCESS!', response.status, response.text)
-    },
-    function (error) {
-      console.log('FAILED...', error)
-    }
-  )
-}
+const emailJSFunctionExample = `
+emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, EMAILJS_ID).then(
+  function (response) {
+    console.log('SUCCESS!', response.status, response.text)
+  },
+  function (error) {
+    console.log('FAILED...', error)
+  }
+)
 `
+const stateExample = `const [name, setName] = useState('')
+const [email, setEmail] = useState('')
+const [formMessage, setFormMessage] = useState('')`
 
-const markdown = `
-${jsxOne}`
+const inputExample = `<input
+className='contact_field_content'
+type='text'
+value={name}
+placeholder='your name'
+onChange={(e) => setName(e.target.value)}
+/> `
 
-export default markdown
+const envExample = `REACT_APP_MY_EMAILJS_ID = user_123
+REACT_APP_MY_SERVICE_ID = service_123
+REACT_APP_MY_TEMPLATE_ID = template_123 `
+
+const templateParamsExample = `const templateParams = {
+  from_name: name,
+  to_name: 'Maciej',
+  message: formMessage,
+  reply_to: email,
+}`
+
+export {
+  emailJSFunctionExample,
+  stateExample,
+  inputExample,
+  envExample,
+  templateParamsExample,
+}

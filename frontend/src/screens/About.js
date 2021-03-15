@@ -8,6 +8,13 @@ import {
   pageVariantsLogo,
   pageVariants,
 } from '../animations/transitions'
+import {
+  emailJSFunctionExample,
+  stateExample,
+  inputExample,
+  envExample,
+  templateParamsExample,
+} from '../components/codeExamples'
 import EmailJSTutorial from '../components/EmailJSTutorial'
 
 const About = () => {
@@ -44,8 +51,11 @@ const About = () => {
               Without efficient, transparent bloatware, you will lack
               affiliate-based compliance.
             </p>
-            <EmailJSTutorial />
-            <a href='#'>Best Quality</a>
+            <EmailJSTutorial codeBlock={stateExample} />
+            <EmailJSTutorial codeBlock={inputExample} />
+            <EmailJSTutorial codeBlock={envExample} />
+            <EmailJSTutorial codeBlock={templateParamsExample} />
+            <EmailJSTutorial codeBlock={emailJSFunctionExample} />
           </div>
         </section>
       </motion.div>

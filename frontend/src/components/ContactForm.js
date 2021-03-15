@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-
 import { useDispatch, useSelector } from 'react-redux'
 import { messageChange, messageReset } from '../actions/messageActions'
 import emailjs from 'emailjs-com'
@@ -33,8 +32,8 @@ const ContactForm = () => {
 
   // emailJS
   const EMAILJS_ID = process.env.REACT_APP_MY_EMAILJS_ID
-  const SERVICE_ID = process.env.REACT_APP_YOUR_SERVICE_ID
-  const TEMPLATE_ID = process.env.REACT_APP_YOUR_TEMPLATE_ID
+  const SERVICE_ID = process.env.REACT_APP_MY_SERVICE_ID
+  const TEMPLATE_ID = process.env.REACT_APP_MY_TEMPLATE_ID
 
   const templateParams = {
     from_name: name,
@@ -105,7 +104,7 @@ const ContactForm = () => {
         </form>
         <div className='send_button_wrapper'>
           <button className='send_button' onClick={messageSaveHandler}>
-            <i class='fas fa-save'></i>
+            <i className='fas fa-save'></i>
           </button>
           <button className='send_button' onClick={messageResetHandler}>
             reset
