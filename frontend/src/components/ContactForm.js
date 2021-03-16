@@ -79,7 +79,7 @@ const ContactForm = () => {
               placeholder='your name'
               onChange={(e) => setName(e.target.value)}
             />
-            <span className='focus-input2' data-placeholder='NAME'></span>
+            <span className='span_input2' data-placeholder='NAME'></span>
           </div>
           <div className='contact_field'>
             <label>email:</label>
@@ -90,7 +90,7 @@ const ContactForm = () => {
               placeholder='your email'
               onChange={(e) => setEmail(e.target.value)}
             />
-            <span className='focus-input2' data-placeholder='NAME'></span>
+            <span className='span_input2' data-placeholder='NAME'></span>
           </div>
           <div className='contact_field'>
             <label> message:</label>
@@ -100,6 +100,7 @@ const ContactForm = () => {
               placeholder='message me'
               onChange={(e) => setFormMessage(e.target.value)}
             ></textarea>
+            <span className='span_input2' data-placeholder='NAME'></span>
           </div>{' '}
         </form>
         <div className='send_button_wrapper'>

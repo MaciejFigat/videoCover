@@ -32,6 +32,7 @@
     min-width: 600px;
     min-height: 100px;
     margin-bottom: 20px;
+    transition: 0.9s;
     @media (min-width: 1010px) and (max-width: 1127px) {
         min-width: 500px;
         }
@@ -58,4 +59,26 @@
     min-height: 25vh;
     resize: none;
     overflow-y: auto;
+}
+
+
+.contact_field2::after{
+    content: "";
+    display: block;
+    position: relative;
+    bottom: 24px;
+    z-index: 10;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(45deg, #c5c0c3, #f3a931);
+
+}
+
+.contact_field_content:focus {
+    border-bottom: 3px solid ;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+    transition: 0.9s;
+          
 }

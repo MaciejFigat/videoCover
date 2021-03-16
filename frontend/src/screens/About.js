@@ -15,7 +15,7 @@ import {
   envExample,
   templateParamsExample,
 } from '../components/codeExamples'
-import EmailJSTutorial from '../components/EmailJSTutorial'
+import CodeHighlight from '../components/CodeHighlight'
 
 const About = () => {
   const menuState = useSelector((state) => state.menuState)
@@ -30,7 +30,7 @@ const About = () => {
         variants={pageVariantsLogo}
         transition={pageTransitionLogo}
       >
-        <h2 className={`logoOnMenu ${menuOpen}`}>About</h2>
+        <h2 className={`logoOnMenu ${menuOpen}`}>Tricks</h2>
       </motion.div>
       <motion.div
         initial='out'
@@ -41,7 +41,7 @@ const About = () => {
       >
         <section className={`showcase ${menuOpen}`}>
           <header>
-            <h2 className='logo'>About</h2>
+            <h2 className='logo'>Tricks</h2>
           </header>
           <div className={`overlay ${menuOpen}`}></div>
           <div className={`text ${menuOpen}`}>
@@ -51,11 +51,11 @@ const About = () => {
               Without efficient, transparent bloatware, you will lack
               affiliate-based compliance.
             </p>
-            <EmailJSTutorial codeBlock={stateExample} />
-            <EmailJSTutorial codeBlock={inputExample} />
-            <EmailJSTutorial codeBlock={envExample} />
-            <EmailJSTutorial codeBlock={templateParamsExample} />
-            <EmailJSTutorial codeBlock={emailJSFunctionExample} />
+            <CodeHighlight codeBlock={stateExample} />
+            <CodeHighlight codeBlock={inputExample} />
+            <CodeHighlight codeBlock={envExample} />
+            <CodeHighlight codeBlock={templateParamsExample} />
+            <CodeHighlight codeBlock={emailJSFunctionExample} />
           </div>
         </section>
       </motion.div>

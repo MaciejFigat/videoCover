@@ -1,7 +1,7 @@
 import React from 'react'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism'
-const EmailJSTutorial = ({ codeBlock }) => {
+const CodeHighlight = ({ codeBlock }) => {
   return (
     <SyntaxHighlighter
       language='jsx'
@@ -14,4 +14,4 @@ const EmailJSTutorial = ({ codeBlock }) => {
   )
 }
 
-export default EmailJSTutorial
+export default CodeHighlight

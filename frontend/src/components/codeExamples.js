@@ -26,7 +26,7 @@ REACT_APP_MY_TEMPLATE_ID = template_123 `
 
 const templateParamsExample = `const templateParams = {
   from_name: name,
-  to_name: 'Maciej',
+  to_name: 'Your name',
   message: formMessage,
   reply_to: email,
 }`
