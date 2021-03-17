@@ -29,31 +29,16 @@
     line-height: 1.2;
     border-bottom: 2px solid #adadad;
     padding: 0.8rem 1.2rem;
-    min-width: 600px;
+    min-width: 60vw;
     min-height: 100px;
     margin-bottom: 20px;
-    transition: 0.9s;
-    @media (min-width: 1010px) and (max-width: 1127px) {
-        min-width: 500px;
-        }
-    @media (min-width: 887px) and (max-width: 1011px) {
-            min-width: 400px;
-            }
-    @media (min-width: 799px) and (max-width: 888px) {
-            min-width: 300px;
-            }
-    @media (min-width: 640px) and (max-width: 798px) {
-        min-width: 400px;
-        min-height: 40px;
-        line-height: 1;
-        margin-top: 10px;
-        }
-    @media(max-width: 639px) {
-        min-width: 250px;
-        min-height: 40px;
-        line-height: 1;
-        }
+    transition: 0.9s;   
+    &.true {
+        min-width: 50vw;
+    } 
+
 }
+
 
 .messageField {
     min-height: 25vh;
@@ -62,7 +47,7 @@
 }
 
 
-.contact_field2::after{
+.contact_field::after{
     content: "";
     display: block;
     position: relative;
@@ -71,14 +56,40 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background: linear-gradient(45deg, #c5c0c3, #f3a931);
+    // transition: 0.7s;
+    
+    --angle: 0deg;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(45deg, #236677, #1bb9ac, #f33141) 1;
+    animation: 10s rotate linear infinite;
 
 }
 
-.contact_field_content:focus {
-    border-bottom: 3px solid ;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
-    transition: 0.9s;
-          
+.contact_field_content:focus + .contact_field::after{
+    border-image: linear-gradient(45deg, #5e7723, #1bb9ac, #b8b63a) 1;
 }
+
+// .contact_field_content:focus {
+//     --angle: 0deg;
+//     border-bottom: 3px solid ;
+//     border-left: 3px solid ;
+//     border-image-slice: 1;
+//     border-image: linear-gradient(var(--angle), #743ad5, #d53a9d) 1;
+//     transition: 0.9s;    
+//     animation: 10s rotate linear infinite;    
+// }
+
+
+
+  
+  @keyframes rotate {
+    to {
+      --angle: 360deg;
+    }
+  }
+
+  @property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }

@@ -8,6 +8,8 @@ import '../styles/button.scss'
 const ContactForm = () => {
   const dispatch = useDispatch()
 
+  const menuState = useSelector((state) => state.menuState)
+  const { menuOpen } = menuState
   const userMessageSaved = useSelector(
     (state) => state.userMessage.userMessageSent
   )
@@ -73,7 +75,7 @@ const ContactForm = () => {
           <div className='contact_field'>
             <label> name: </label>
             <input
-              className='contact_field_content'
+              className={`contact_field_content ${menuOpen}`}
               type='text'
               value={name}
               placeholder='your name'
@@ -84,7 +86,7 @@ const ContactForm = () => {
           <div className='contact_field'>
             <label>email:</label>
             <input
-              className='contact_field_content'
+              className={`contact_field_content ${menuOpen}`}
               type='email'
               value={email}
               placeholder='your email'
@@ -95,7 +97,7 @@ const ContactForm = () => {
           <div className='contact_field'>
             <label> message:</label>
             <textarea
-              className='contact_field_content messageField'
+              className={`contact_field_content ${menuOpen} messageField`}
               value={formMessage}
               placeholder='message me'
               onChange={(e) => setFormMessage(e.target.value)}
