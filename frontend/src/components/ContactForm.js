@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { messageChange, messageReset } from '../actions/messageActions'
 import emailjs from 'emailjs-com'
+import Toast from '../components/Toast'
 import '../styles/Form.scss'
 import '../styles/button.scss'
 
@@ -22,13 +23,16 @@ const ContactForm = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [formMessage, setFormMessage] = useState('')
+  const [toastVersion, setToastVersion] = useState('none')
 
   const messageSaveHandler = (e) => {
     e.preventDefault()
+    setToastVersion('saved')
     dispatch(messageChange({ name, email, message: formMessage }))
   }
   const messageResetHandler = (e) => {
     e.preventDefault()
+    setToastVersion('reset')
     dispatch(messageReset())
   }
 
@@ -50,13 +54,30 @@ const ContactForm = () => {
     emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, EMAILJS_ID).then(
       function (response) {
         console.log('SUCCESS!', response.status, response.text)
+        setToastVersion('success')
       },
       function (error) {
         console.log('FAILED...', error)
+        setToastVersion('failure')
       }
     )
   }
-
+  const toastNone = (e) => {
+    e.preventDefault()
+    setToastVersion('none')
+  }
+  const toastSuccess = (e) => {
+    e.preventDefault()
+    setToastVersion('success')
+  }
+  const toastFailure = (e) => {
+    e.preventDefault()
+    setToastVersion('failure')
+  }
+  const toastReset = (e) => {
+    e.preventDefault()
+    setToastVersion('reset')
+  }
   //
 
   useEffect(() => {
@@ -65,7 +86,11 @@ const ContactForm = () => {
       setEmail(userEmail)
       setFormMessage(userMessageContent)
     }
-  }, [userMessageSaved, userEmail, userMessageContent, userName])
+    const timer = setTimeout(() => {
+      setToastVersion('none')
+    }, 3000)
+    return () => clearTimeout(timer)
+  }, [toastVersion, userMessageSaved, userEmail, userMessageContent, userName])
 
   return (
     <>
@@ -116,6 +141,25 @@ const ContactForm = () => {
             send
           </button>
         </div>
+      </div>
+      <button className='send_button' onClick={toastNone}>
+        none
+      </button>
+      <button className='send_button' onClick={toastSuccess}>
+        success
+      </button>
+      <button className='send_button' onClick={toastFailure}>
+        failure
+      </button>
+      <button className='send_button' onClick={toastReset}>
+        reset
+      </button>
+      <div onClick={toastNone}>
+        <Toast
+          toastMessage='message sent'
+          menuOpen={menuOpen}
+          toastVersion={toastVersion}
+        />
       </div>
     </>
   )

@@ -21,27 +21,16 @@
     font-family: "Lato", sans-serif;
     color: whitesmoke;
     text-align: center;
-    background: #14010c;
-    box-shadow: 3px 3px 8px #243033, -3px -3px 8px #2e3755;
+    background: #2e67bd;
+    // box-shadow: 3px 3px 8px #817cb9, -3px -3px 8px #1e2f64;
     transition: 0.5s;
     &:hover {
-      background: rgb(175, 170, 197);
+      background: rgb(182, 179, 197);
       transition: 0.5s;
       color:rgb(37, 36, 36);
-      
+      box-shadow: 3px 3px 8px #7de0f8;
     } 
     &:active {
-      background: rgb(112, 93, 200);
+      background: rgb(148, 16, 86);
     }
   }
-  // .send_button:hover {
-  //   background: rgb(168, 195, 183);
-  //   transition: 0.5s;
-  //   color:#333;
-    
-  // }
-  // .send_button:active {
-  //   background: rgb(20, 170, 108);
-  // }
-  
-  

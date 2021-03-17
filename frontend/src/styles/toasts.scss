@@ -1,0 +1,48 @@
+
+.toasts {
+    position: absolute;
+    top: -50px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transition: 0.7s;
+    &.true{
+    right: 10px;
+    top: -55px;
+    transition: 0.7s;
+    }
+}
+
+.toast {
+    position: relative;
+    // top: 100px;
+    right: 0px;
+    background-color: rgb(230, 205, 205);
+    color:rgb(85, 58, 24); 
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    width: 150px;
+    height: 80px;
+    z-index: 12;
+    transition: ease-in 0.7s;
+    &.none{
+        opacity: 0;
+        right: -100px;
+        transition: ease-in 0.7s;
+    }
+    &.success{
+        background-color: rgb(57, 214, 84);
+    }
+    &.saved{
+        background-color: rgb(172, 37, 120);
+    }
+    &.failure{
+        background-color: rgb(214, 29, 29);
+    }
+    &.reset{
+        background-color: rgb(196, 110, 39);
+    }
+  
+}
