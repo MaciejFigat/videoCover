@@ -14,6 +14,26 @@
     display: flex;
     flex-direction: column;
     text-align: left;
+     label {
+        color:rgb(40, 179, 179);
+    }
+    &:after{
+        content: "";
+        display: block;
+        position: relative;
+        bottom: 24px;
+        z-index: 10;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        // transition: 0.7s;
+        
+        --angle: 0deg;
+        border-bottom: 2px solid;
+        border-image: linear-gradient(45deg, #236677, #1bb9ac, #88b4b4) 1;
+        animation: 10s rotate linear infinite;
+    
+    }
 }
 
 
@@ -36,7 +56,14 @@
     &.true {
         min-width: 50vw;
     } 
-
+    &:focus {
+        --angle: 0deg;
+        border-left: 2px solid ;
+        border-image-slice: 1;
+        border-image: linear-gradient(var(--angle),  #07c5c5, #504638, #3abed5) 1;
+        transition: 1.9s;    
+        animation: 10s rotate linear infinite;    
+    }
 }
 
 
@@ -46,48 +73,14 @@
     overflow-y: auto;
 }
 
-
-.contact_field::after{
-    content: "";
-    display: block;
-    position: relative;
-    bottom: 24px;
-    z-index: 10;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    // transition: 0.7s;
-    
-    --angle: 0deg;
-    border-bottom: 3px solid;
-    border-image: linear-gradient(45deg, #236677, #1bb9ac, #f33141) 1;
-    animation: 10s rotate linear infinite;
-
-}
-
-.contact_field_content:focus + .contact_field::after{
-    border-image: linear-gradient(45deg, #5e7723, #1bb9ac, #b8b63a) 1;
-}
-
-// .contact_field_content:focus {
-//     --angle: 0deg;
-//     border-bottom: 3px solid ;
-//     border-left: 3px solid ;
-//     border-image-slice: 1;
-//     border-image: linear-gradient(var(--angle), #743ad5, #d53a9d) 1;
-//     transition: 0.9s;    
-//     animation: 10s rotate linear infinite;    
-// }
-
-
-
-  
+ 
   @keyframes rotate {
     to {
       --angle: 360deg;
     }
   }
 
+//   this unfortunately works only on chromium based browsers ie. Chrome, Edge
   @property --angle {
     syntax: '<angle>';
     initial-value: 0deg;

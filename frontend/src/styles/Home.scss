@@ -58,10 +58,7 @@
         opacity: 0.9;
     }
 }
-// .logoOnMenu.true { 
-//     transition: 1s;
-//     opacity: 0.9;
-// }
+
 .showcase video {
     position: absolute;
     top: 0;
@@ -71,13 +68,7 @@
     height: 100%;
     opacity: 0.79;
 }
-// .showcase.true {
-//     right: 300px;
-//     transition: 0.4s;
-//     @media(max-width: 798px) {
-//         right: 260px;
-//         }
-// }
+
 
 /* here is the parent of the navigation Burger */
 .toggle {
@@ -100,10 +91,7 @@
         transition: 0.7s;
     }
 }
-// .toggle.true {
-//     background-color: #92185b;
-//     transition: 0.7s;
-// }
+
 
 .menu {
     position: absolute;
@@ -166,21 +154,8 @@
   
     
     }
-}
-// .text.true {
-//         opacity: 0.8;
-//         margin-left: 300px;
-//         transition: 0.7s; 
-//     @media(max-width: 798px) {
-//         opacity: 0;
-//         }
-//     @media(max-width: 360px) {
-//             margin: 0;
-//             transition: 0.7s;
-//             }
-  
-    
-// }
+    }
+
 .text h2{
    font-size: 4em;
    font-weight: 800;
