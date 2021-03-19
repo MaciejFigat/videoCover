@@ -16,27 +16,25 @@
 
 .toast {
     position: relative;
-    // top: 100px;
     right: 0px;
-    background-color: rgb(230, 205, 205);
-    color:rgb(85, 58, 24); 
+    color:rgb(15, 13, 10); 
     border-radius: 5px;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem; 
     margin: 0.5rem;
-    width: 150px;
-    height: 80px;
+    min-width: fit-content;
     z-index: 12;
-    transition: ease-in 0.7s;
+    transition: ease-out 0.7s;
     &.none{
         opacity: 0;
+        // display: none;
         right: -100px;
-        transition: ease-in 0.7s;
+        transition: ease-in 0.3s;
     }
     &.success{
         background-color: rgb(57, 214, 84);
     }
     &.saved{
-        background-color: rgb(172, 37, 120);
+        background-color: rgb(42, 115, 211);
     }
     &.failure{
         background-color: rgb(214, 29, 29);

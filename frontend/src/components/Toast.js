@@ -4,7 +4,7 @@ const Toast = ({ toastMessage, menuOpen, toastVersion }) => {
   return (
     <div className={`toasts ${menuOpen}`}>
       <div className={`toast ${toastVersion} ${menuOpen} `}>
-        {toastMessage} {toastVersion}
+        <b>{toastMessage}</b>
       </div>
     </div>
   )

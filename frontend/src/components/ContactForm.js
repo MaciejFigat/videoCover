@@ -24,15 +24,18 @@ const ContactForm = () => {
   const [email, setEmail] = useState('')
   const [formMessage, setFormMessage] = useState('')
   const [toastVersion, setToastVersion] = useState('none')
+  const [toastMessage, setToastMessage] = useState('')
 
   const messageSaveHandler = (e) => {
     e.preventDefault()
     setToastVersion('saved')
+    setToastMessage('Data stored in the app')
     dispatch(messageChange({ name, email, message: formMessage }))
   }
   const messageResetHandler = (e) => {
     e.preventDefault()
     setToastVersion('reset')
+    setToastMessage('Data reset')
     dispatch(messageReset())
   }
 
@@ -55,10 +58,12 @@ const ContactForm = () => {
       function (response) {
         console.log('SUCCESS!', response.status, response.text)
         setToastVersion('success')
+        setToastMessage('Message sent!')
       },
       function (error) {
         console.log('FAILED...', error)
         setToastVersion('failure')
+        setToastMessage('Message was lost ;-(')
       }
     )
   }
@@ -142,21 +147,9 @@ const ContactForm = () => {
           </button>
         </div>
       </div>
-      <button className='send_button' onClick={toastNone}>
-        none
-      </button>
-      <button className='send_button' onClick={toastSuccess}>
-        success
-      </button>
-      <button className='send_button' onClick={toastFailure}>
-        failure
-      </button>
-      <button className='send_button' onClick={toastReset}>
-        reset
-      </button>
       <div onClick={toastNone}>
         <Toast
-          toastMessage='message sent'
+          toastMessage={toastMessage}
           menuOpen={menuOpen}
           toastVersion={toastVersion}
         />

@@ -34,6 +34,7 @@
     
 }
 .logo {
+    margin-top: 20px;
     top: 20;
     position: absolute;
     left: 20;
@@ -130,11 +131,15 @@
     background-color: #ceb265;
     mix-blend-mode: overlay;
     transition: 0.7s;
+    &.true {
+        background-color: #924518;
+        transition: 0.7s;
+    }
 }
-.overlay.true {
-    background-color: #924518;
-    transition: 0.7s;
-}
+// .overlay.true {
+//     background-color: #924518;
+//     transition: 0.7s;
+// }
 
 .text {
     position: relative;
@@ -224,7 +229,7 @@
 
 @media(max-width: 798px) {
     .showcase, .showcase header {
-        padding: 20px;
+        padding: 20px 20px;
     }
     .text h2 {
         font-size: 3em;

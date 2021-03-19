@@ -19,7 +19,7 @@ Just like so, for name:
             />             
 ```
 4. EmailJS install and import
-* npm i emailjs 
+* npm i emailjs-com
 * import emailjs from 'emailjs-com'
 5. Set up a file called .env in the root of the project. I use them to hide the variables from my EmailJS account. While at it, check if we have .env included in .gitignore file. If not - we should add it, to not expose the variables in our remote repository. 
 **Warning**: Viablility of this solution is dependant on your version of your react-scripts and actually using React - since we are basing the whole tutorial on the fact that React uses .env under the hood. 
@@ -64,7 +64,7 @@ There should be a message in the console informing about the result.
 10. Reminder - Changing any environment variables will require you to restart the development server if it is running. 
 11. For more information about environmental variables in React: https://create-react-app.dev/docs/adding-custom-environment-variables/
 
-12. For more information about EmailJS read docs at: https://www.npmjs.com/package/emailjs
+12. For more information about emailjs-com read docs at: https://www.npmjs.com/package/emailjs-com
 
 ```  
 const EMAILJS_ID = process.env.REACT_APP_MY_EMAILJS_ID
