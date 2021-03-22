@@ -33,4 +33,11 @@
     &:active {
       background: rgb(148, 16, 86);
     }
+    @media (max-width: 798px) {
+      padding: 5px 10px 20px;
+      height: 2vh;
+      min-height: 20px; 
+      font-size: 15px;
+      font-weight: 400;
+  }
   }

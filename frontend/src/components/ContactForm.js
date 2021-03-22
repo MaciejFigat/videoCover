@@ -71,19 +71,6 @@ const ContactForm = () => {
     e.preventDefault()
     setToastVersion('none')
   }
-  const toastSuccess = (e) => {
-    e.preventDefault()
-    setToastVersion('success')
-  }
-  const toastFailure = (e) => {
-    e.preventDefault()
-    setToastVersion('failure')
-  }
-  const toastReset = (e) => {
-    e.preventDefault()
-    setToastVersion('reset')
-  }
-  //
 
   useEffect(() => {
     if (userMessageSaved) {
