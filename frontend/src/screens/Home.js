@@ -1,17 +1,9 @@
 import React from 'react'
 import fogMountain from '../assets/fogMountain.mp4'
-import Burger from '../components/Burger'
-import Menu from '../layout/Menu'
 import '../styles/Home.scss'
-import { NavLink } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import { motion } from 'framer-motion'
-import {
-  pageTransitionLogo,
-  pageTransition,
-  pageVariantsLogo,
-  pageVariants,
-} from '../animations/transitions'
+import AnimationWrapperLogo from '../animations/AnimationWrapperLogo'
+import AnimationWrapper from '../animations/AnimationWrapper'
 
 const Home = () => {
   const menuState = useSelector((state) => state.menuState)
@@ -19,22 +11,10 @@ const Home = () => {
 
   return (
     <>
-      <motion.div
-        initial='out'
-        animate='in'
-        exit='out'
-        variants={pageVariantsLogo}
-        transition={pageTransitionLogo}
-      >
+      <AnimationWrapperLogo>
         <h2 className={`logoOnMenu ${menuOpen}`}>Logo</h2>
-      </motion.div>
-      <motion.div
-        initial='out'
-        animate='in'
-        exit='in'
-        variants={pageVariants}
-        transition={pageTransition}
-      >
+      </AnimationWrapperLogo>
+      <AnimationWrapper>
         <section className={`showcase ${menuOpen}`}>
           <header>
             <h2 className='logo'>Logo</h2>
@@ -57,27 +37,26 @@ const Home = () => {
               micro-resource-constrained performance, you will lack synergies.
               If you transition globally, you may also mesh iteravely.
             </p>
-            <a href='#'>Best Quality</a>
           </div>
           <ul className='social'>
             <li>
-              <a href='#'>
+              <a href='https://github.com/MaciejFigat'>
                 <i className='fab fa-github-square'></i>
               </a>
             </li>
             <li>
-              <a href='#'>
+              <a href='https://www.linkedin.com/in/maciej-figat/'>
                 <i className='fab fa-linkedin'></i>
               </a>
             </li>
             <li>
-              <a href='#'>
+              <a href='/contact'>
                 <i className='fas fa-envelope-square'></i>
               </a>
             </li>
           </ul>
         </section>
-      </motion.div>
+      </AnimationWrapper>
     </>
   )
 }

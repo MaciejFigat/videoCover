@@ -1,13 +1,8 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import '../styles/Home.scss'
-import { motion } from 'framer-motion'
-import {
-  pageTransitionLogo,
-  pageTransition,
-  pageVariantsLogo,
-  pageVariants,
-} from '../animations/transitions'
+import AnimationWrapperLogo from '../animations/AnimationWrapperLogo'
+import AnimationWrapper from '../animations/AnimationWrapper'
 import {
   emailJSFunctionExample,
   stateExample,
@@ -23,22 +18,10 @@ const About = () => {
 
   return (
     <>
-      <motion.div
-        initial='out'
-        animate='in'
-        exit='out'
-        variants={pageVariantsLogo}
-        transition={pageTransitionLogo}
-      >
+      <AnimationWrapperLogo>
         <h2 className={`logoOnMenu ${menuOpen}`}>Tricks</h2>
-      </motion.div>
-      <motion.div
-        initial='out'
-        animate='in'
-        exit='in'
-        variants={pageVariants}
-        transition={pageTransition}
-      >
+      </AnimationWrapperLogo>
+      <AnimationWrapper>
         <section className={`showcase ${menuOpen}`}>
           <header>
             <h2 className='logo'>Tricks</h2>
@@ -58,7 +41,7 @@ const About = () => {
             <CodeHighlight codeBlock={emailJSFunctionExample} />
           </div>
         </section>
-      </motion.div>
+      </AnimationWrapper>
     </>
   )
 }

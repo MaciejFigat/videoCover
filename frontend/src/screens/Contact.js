@@ -1,14 +1,9 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import '../styles/Home.scss'
-import { motion } from 'framer-motion'
-import {
-  pageTransitionLogo,
-  pageTransition,
-  pageVariantsLogo,
-  pageVariants,
-} from '../animations/transitions'
 import ContactForm from '../components/ContactForm'
+import AnimationWrapperLogo from '../animations/AnimationWrapperLogo'
+import AnimationWrapper from '../animations/AnimationWrapper'
 
 const About = () => {
   const menuState = useSelector((state) => state.menuState)
@@ -16,22 +11,10 @@ const About = () => {
 
   return (
     <>
-      <motion.div
-        initial='out'
-        animate='in'
-        exit='out'
-        variants={pageVariantsLogo}
-        transition={pageTransitionLogo}
-      >
+      <AnimationWrapperLogo>
         <h2 className={`logoOnMenu ${menuOpen}`}>Contact</h2>
-      </motion.div>
-      <motion.div
-        initial='out'
-        animate='in'
-        exit='in'
-        variants={pageVariants}
-        transition={pageTransition}
-      >
+      </AnimationWrapperLogo>
+      <AnimationWrapper>
         <section className={`showcase ${menuOpen}`}>
           <header>
             <h2 className='logo'>Contact me</h2>
@@ -42,7 +25,7 @@ const About = () => {
             <ContactForm />
           </div>
         </section>
-      </motion.div>
+      </AnimationWrapper>
     </>
   )
 }

@@ -1,13 +1,8 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import '../styles/Home.scss'
-import { motion } from 'framer-motion'
-import {
-  pageTransitionLogo,
-  pageTransition,
-  pageVariantsLogo,
-  pageVariants,
-} from '../animations/transitions'
+import AnimationWrapperLogo from '../animations/AnimationWrapperLogo'
+import AnimationWrapper from '../animations/AnimationWrapper'
 
 const Misc = () => {
   const menuState = useSelector((state) => state.menuState)
@@ -15,23 +10,11 @@ const Misc = () => {
 
   return (
     <>
-      <motion.div
-        initial='out'
-        animate='in'
-        exit='out'
-        variants={pageVariantsLogo}
-        transition={pageTransitionLogo}
-      >
+      <AnimationWrapperLogo>
         <h2 className={`logoOnMenu ${menuOpen}`}>Misc</h2>
-      </motion.div>
+      </AnimationWrapperLogo>
 
-      <motion.div
-        initial='out'
-        animate='in'
-        exit='in'
-        variants={pageVariants}
-        transition={pageTransition}
-      >
+      <AnimationWrapper>
         <section className={`showcase ${menuOpen}`}>
           <header>
             <h2 className='logo'>Misc</h2>
@@ -45,10 +28,9 @@ const Misc = () => {
               Without macro-vertical CAE, you will lack research and
               development.
             </p>
-            <a href='#'>Best Quality</a>
           </div>
         </section>
-      </motion.div>
+      </AnimationWrapper>
     </>
   )
 }
