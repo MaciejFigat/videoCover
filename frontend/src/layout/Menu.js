@@ -1,7 +1,18 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-
+import { useDispatch, useSelector } from 'react-redux'
+import { closeMenu } from '../actions/menuActions'
 const Menu = () => {
+  const dispatch = useDispatch()
+
+  const menuState = useSelector((state) => state.menuState)
+  const { menuOpen } = menuState
+
+  const handleClickMenu = () => {
+    if (menuOpen === true) {
+      dispatch(closeMenu())
+    }
+  }
   return (
     <>
       <div className='menu'>
@@ -12,6 +23,7 @@ const Menu = () => {
               to='/home'
               className='nav_link'
               activeClassName='nav_link_active'
+              onClick={handleClickMenu}
             >
               Accepted buzzword
             </NavLink>
@@ -22,6 +34,7 @@ const Menu = () => {
               to='/about'
               className='nav_link'
               activeClassName='nav_link_active'
+              onClick={handleClickMenu}
             >
               Customer-directed
             </NavLink>
@@ -32,6 +45,7 @@ const Menu = () => {
               to='/misc'
               className='nav_link'
               activeClassName='nav_link_active'
+              onClick={handleClickMenu}
             >
               Quality driven
             </NavLink>
@@ -42,6 +56,7 @@ const Menu = () => {
               to='/contact'
               className='nav_link'
               activeClassName='nav_link_active'
+              onClick={handleClickMenu}
             >
               Contact
             </NavLink>

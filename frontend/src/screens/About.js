@@ -23,9 +23,6 @@ const About = () => {
       </AnimationWrapperLogo>
       <AnimationWrapper>
         <section className={`showcase ${menuOpen}`}>
-          <header>
-            <h2 className='logo'>Tricks</h2>
-          </header>
           <div className={`overlay ${menuOpen}`}></div>
           <div className={`text ${menuOpen}`}>
             <h2>About things</h2>
