@@ -2,7 +2,8 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import '../styles/Home.scss'
 import AnimationWrapperLogo from '../animations/AnimationWrapperLogo'
-import AnimationWrapper from '../animations/AnimationWrapper'
+
+import AnimWrapperSecondary from '../animations/AnimWrapperSecondary'
 import {
   emailJSFunctionExample,
   stateExample,
@@ -21,7 +22,7 @@ const About = () => {
       <AnimationWrapperLogo>
         <h2 className={`logoOnMenu ${menuOpen}`}>Tricks</h2>
       </AnimationWrapperLogo>
-      <AnimationWrapper>
+      <AnimWrapperSecondary>
         <section className={`showcase ${menuOpen}`}>
           <div className={`overlay ${menuOpen}`}></div>
           <div className={`text ${menuOpen}`}>
@@ -38,7 +39,7 @@ const About = () => {
             <CodeHighlight codeBlock={emailJSFunctionExample} />
           </div>
         </section>
-      </AnimationWrapper>
+      </AnimWrapperSecondary>
     </>
   )
 }

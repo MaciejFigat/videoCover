@@ -3,7 +3,7 @@ import fogMountain from '../assets/fogMountain.mp4'
 import '../styles/Home.scss'
 import { useSelector } from 'react-redux'
 import AnimationWrapperLogo from '../animations/AnimationWrapperLogo'
-import AnimationWrapper from '../animations/AnimationWrapper'
+import AnimWrapperSecondary from '../animations/AnimWrapperSecondary'
 
 const Home = () => {
   const menuState = useSelector((state) => state.menuState)
@@ -14,7 +14,7 @@ const Home = () => {
       <AnimationWrapperLogo>
         <h2 className={`logoOnMenu ${menuOpen}`}>Logo</h2>
       </AnimationWrapperLogo>
-      <AnimationWrapper>
+      <AnimWrapperSecondary>
         <section className={`showcase ${menuOpen}`}>
           <header>
             <h2 className='logo'>Logo</h2>
@@ -56,7 +56,7 @@ const Home = () => {
             </li>
           </ul>
         </section>
-      </AnimationWrapper>
+      </AnimWrapperSecondary>
     </>
   )
 }

@@ -3,8 +3,7 @@ import { useSelector } from 'react-redux'
 import '../styles/Home.scss'
 import ContactForm from '../components/ContactForm'
 import AnimationWrapperLogo from '../animations/AnimationWrapperLogo'
-import AnimationWrapper from '../animations/AnimationWrapper'
-
+import AnimWrapperSecondary from '../animations/AnimWrapperSecondary'
 const About = () => {
   const menuState = useSelector((state) => state.menuState)
   const { menuOpen } = menuState
@@ -14,7 +13,7 @@ const About = () => {
       <AnimationWrapperLogo>
         <h2 className={`logoOnMenu ${menuOpen}`}>Contact</h2>
       </AnimationWrapperLogo>
-      <AnimationWrapper>
+      <AnimWrapperSecondary>
         <section className={`showcase ${menuOpen}`}>
           <header>
             <h2 className='logo'>Contact me</h2>
@@ -25,7 +24,7 @@ const About = () => {
             <ContactForm />
           </div>
         </section>
-      </AnimationWrapper>
+      </AnimWrapperSecondary>
     </>
   )
 }
