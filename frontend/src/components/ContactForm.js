@@ -87,7 +87,7 @@ const ContactForm = () => {
   return (
     <>
       {' '}
-      <div className='contact_form_container'>
+      <div className={`contact_form_container ${menuOpen}`}>
         <form className='contact_form'>
           <div className='contact_field'>
             <label> name: </label>

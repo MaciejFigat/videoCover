@@ -1,6 +1,5 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import '../styles/Home.scss'
 import AnimationWrapperLogo from '../animations/AnimationWrapperLogo'
 
 import AnimWrapperSecondary from '../animations/AnimWrapperSecondary'
