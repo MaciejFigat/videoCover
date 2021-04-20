@@ -15,7 +15,7 @@ const Menu = () => {
   }
   return (
     <>
-      <div className='menu'>
+      <div className={`menu ${menuOpen}`}>
         <ul>
           <li>
             <NavLink

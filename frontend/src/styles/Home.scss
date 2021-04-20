@@ -105,9 +105,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    transition: 0.3s;
     @media(max-width: 798px) {
         width: 260px;
+        
         }
+    &.true {
+        z-index: 10;
+        opacity: 1;
+        transition: 0.7s;
+    }    
 }
 .menu ul {
     position: relative;
