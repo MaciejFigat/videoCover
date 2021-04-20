@@ -3,8 +3,7 @@
     place-items: center;
     z-index: 4;
     &.true {
-        z-index: -1;
-    }
+        z-index: -1;}
     
 }
 .contact_form {  
@@ -67,6 +66,10 @@
         border-image: linear-gradient(var(--angle),  #07c5c5, #504638, #3abed5) 1;
         transition: 1.9s;    
         animation: 10s rotate linear infinite;    
+    }
+    @media (max-width: 798px) {
+        min-width: 73vw;
+       
     }
 }
 
