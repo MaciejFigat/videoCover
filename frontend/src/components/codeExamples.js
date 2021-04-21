@@ -31,10 +31,15 @@ const templateParamsExample = `const templateParams = {
   reply_to: email,
 }`
 
+const envVariablesAccess = `const EMAILJS_ID = process.env.REACT_APP_MY_EMAILJS_ID
+const SERVICE_ID = process.env.REACT_APP_MY_SERVICE_ID
+const TEMPLATE_ID = process.env.REACT_APP_MY_TEMPLATE_ID`
+
 export {
   emailJSFunctionExample,
   stateExample,
   inputExample,
   envExample,
   templateParamsExample,
+  envVariablesAccess,
 }
