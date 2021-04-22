@@ -26,29 +26,32 @@ const About = () => {
         <section className={`showcase ${menuOpen}`}>
           <div className={`overlay ${menuOpen}`}></div>
           <div className={`text ${menuOpen}`}>
-            <h2>React EmailJS</h2>
-            <h3>
-              Sending an email with EmailJS intermediary - simple approach.
-            </h3>
-            <b>
-              <p>
+            <h2>React + EmailJS</h2>
+            <h3>Sending an email through a form with EmailJS intermediary.</h3>
+            <p>
+              <b>
                 Warning: Viablility of this solution is dependant on your
                 version of your react-scripts and actually using React - since
                 we are basing the whole tutorial on the fact that React uses
                 .env under the hood.{' '}
-              </p>
-            </b>
+              </b>
+            </p>
             <p>1. Create a form component. </p>
             <p>
               2. Set up useState hooks for your inputs in the form, just like
               so:
             </p>
-            <CodeHighlight codeBlock={stateExample} />{' '}
+            <span>
+              <CodeHighlight codeBlock={stateExample} />
+            </span>{' '}
             <p>
               3. Include function updating the relevant state in onChange event
               in inputs of your form. Example, for name:
             </p>
-            <CodeHighlight codeBlock={inputExample} />
+            <span>
+              {' '}
+              <CodeHighlight codeBlock={inputExample} />
+            </span>
             <p>
               4. Install EmailJS and import it to your form. <br /> npm i
               emailjs-com <br /> import emailjs from 'emailjs-com'
@@ -71,24 +74,30 @@ const About = () => {
               environment variables must be named in this convention ie.
               starting with REACT_APP_.
             </p>
-            <CodeHighlight codeBlock={envExample} />
+            <span>
+              <CodeHighlight codeBlock={envExample} />
+            </span>
             <p>
               8. Environment variables, we just set up, will be defined on
               process.env. For example: process.env.REACT_APP_MY_EMAILJS_ID will
               expose REACT_APP_MY_EMAILJS_ID environmental variable.
             </p>
+            <p>9. In the Form component we need to set up 3 things: </p>
             <p>
-              9. In the Form component we need to set up 3 things:{' '}
-              <p>
-                way of accessing environmental variables that will be used in
-                the emailJS function:
-              </p>
-              <CodeHighlight codeBlock={envVariablesAccess} />
+              way of accessing environmental variables that will be used in the
+              emailJS function:
             </p>
+            <span>
+              <CodeHighlight codeBlock={envVariablesAccess} />
+            </span>
             <p>template for our email, for example:</p>
-            <CodeHighlight codeBlock={templateParamsExample} />
+            <span>
+              <CodeHighlight codeBlock={templateParamsExample} />
+            </span>
             <p>function to send the email</p>
-            <CodeHighlight codeBlock={emailJSFunctionExample} />
+            <span>
+              <CodeHighlight codeBlock={emailJSFunctionExample} />
+            </span>
             <p>
               10. When code above will be executed, in my case through onClick
               event in a form button. There should be a message in the console
@@ -101,7 +110,7 @@ const About = () => {
             </p>
             <p>
               <a href='https://create-react-app.dev/docs/adding-custom-environment-variables/'>
-                More info - environmental variables in React.
+                More info on environmental variables in React.
               </a>
             </p>
             <p>

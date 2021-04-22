@@ -25,7 +25,7 @@ const Menu = () => {
               activeClassName='nav_link_active'
               onClick={handleClickMenu}
             >
-              Accepted buzzword
+              Home
             </NavLink>
           </li>
           <li>
@@ -36,7 +36,7 @@ const Menu = () => {
               activeClassName='nav_link_active'
               onClick={handleClickMenu}
             >
-              Customer-directed
+              React Tricks
             </NavLink>
           </li>
           <li>
@@ -47,7 +47,7 @@ const Menu = () => {
               activeClassName='nav_link_active'
               onClick={handleClickMenu}
             >
-              Quality driven
+              Misc
             </NavLink>
           </li>
           <li>
