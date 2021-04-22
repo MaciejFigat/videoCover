@@ -2,7 +2,6 @@ import React from 'react'
 import fogMountain from '../assets/fogMountain.mp4'
 import '../styles/Home.scss'
 import { useSelector } from 'react-redux'
-import AnimationWrapperLogo from '../animations/AnimationWrapperLogo'
 import AnimWrapperSecondary from '../animations/AnimWrapperSecondary'
 
 const Home = () => {
@@ -11,9 +10,6 @@ const Home = () => {
 
   return (
     <>
-      <AnimationWrapperLogo>
-        <h2 className={`logoOnMenu ${menuOpen}`}>Logo</h2>
-      </AnimationWrapperLogo>
       <AnimWrapperSecondary>
         <section className={`showcase ${menuOpen}`}>
           <header>

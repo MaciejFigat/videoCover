@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import ContactForm from '../components/ContactForm'
-import AnimationWrapperLogo from '../animations/AnimationWrapperLogo'
+
 import AnimWrapperSecondary from '../animations/AnimWrapperSecondary'
 const About = () => {
   const menuState = useSelector((state) => state.menuState)
@@ -9,9 +9,6 @@ const About = () => {
 
   return (
     <>
-      <AnimationWrapperLogo>
-        <h2 className={`logoOnMenu ${menuOpen}`}>Contact</h2>
-      </AnimationWrapperLogo>
       <AnimWrapperSecondary>
         <section className={`showcase ${menuOpen}`}>
           <header>

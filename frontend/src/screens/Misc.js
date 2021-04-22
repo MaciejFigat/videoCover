@@ -1,6 +1,5 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import AnimationWrapperLogo from '../animations/AnimationWrapperLogo'
 import AnimWrapperSecondary from '../animations/AnimWrapperSecondary'
 const Misc = () => {
   const menuState = useSelector((state) => state.menuState)
@@ -8,10 +7,6 @@ const Misc = () => {
 
   return (
     <>
-      <AnimationWrapperLogo>
-        <h2 className={`logoOnMenu ${menuOpen}`}>Misc</h2>
-      </AnimationWrapperLogo>
-
       <AnimWrapperSecondary>
         <section className={`showcase ${menuOpen}`}>
           <header>
