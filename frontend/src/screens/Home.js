@@ -13,7 +13,7 @@ const Home = () => {
       <AnimWrapperSecondary>
         <section className={`showcase ${menuOpen}`}>
           <header>
-            <h2 className='logo'>Logo</h2>
+            <h2 className='logo'>Maciej Figat</h2>
           </header>
 
           <video
@@ -26,12 +26,15 @@ const Home = () => {
 
           <div className={`overlay ${menuOpen}`}></div>
           <div className={`text ${menuOpen}`}>
-            <h2>Live, love</h2>
-            <h3>Eat The capability to implement.</h3>
+            <h2>Welcome</h2>
+            <h3>Here you can find me and my recent works.</h3>
             <p>
-              Without C2C, you will lack architectures. Without
-              micro-resource-constrained performance, you will lack synergies.
-              If you transition globally, you may also mesh iteravely.
+              I intend to share some cool, yet easy to implement, tricks and
+              methods I used recently in React development.
+            </p>
+            <p>
+              Below lie some links to my social accounts as well as my digital
+              resume. Visit me there if you like.
             </p>
           </div>
           <ul className='social'>
@@ -48,6 +51,11 @@ const Home = () => {
             <li>
               <a href='/contact'>
                 <i className='fas fa-envelope-square'></i>
+              </a>
+            </li>
+            <li>
+              <a href='https://maciejfigat.github.io/digitalCV/'>
+                <i className='fas fa-user-graduate'></i>
               </a>
             </li>
           </ul>
