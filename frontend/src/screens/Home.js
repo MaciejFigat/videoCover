@@ -16,14 +16,6 @@ const Home = () => {
             <h2 className='logo'>Maciej Figat</h2>
           </header>
 
-          <video
-            className='video'
-            src={fogMountain}
-            muted
-            loop
-            autoPlay
-          ></video>
-
           <div className={`overlay ${menuOpen}`}></div>
           <div className={`text ${menuOpen}`}>
             <h2>Welcome</h2>
