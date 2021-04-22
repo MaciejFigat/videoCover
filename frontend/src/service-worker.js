@@ -19,11 +19,13 @@ clientsClaim()
 // Their URLs are injected into the manifest variable below.
 // This variable must be present somewhere in your service worker file,
 // even if you decide not to use precaching. See https://cra.link/PWA
+
+//here I added an exclusion of .mp4 formatted files from self.__WB_MANIFEST
 const filteredManifest = self.__WB_MANIFEST.filter((entry) => {
-  return !entry.url.endsWith('.mp4')
+  return !entry.endsWith('.mp4')
 })
 precacheAndRoute(filteredManifest)
-precacheAndRoute(self.__WB_MANIFEST)
+// precacheAndRoute(self.__WB_MANIFEST)
 
 // Set up App Shell-style routing, so that all navigation requests
 // are fulfilled with your index.html shell. Learn more at
