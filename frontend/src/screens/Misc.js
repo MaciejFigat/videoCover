@@ -13,7 +13,7 @@ const Misc = () => {
             <h2 className='logo'>Misc</h2>
           </header>
 
-          <div className={`overlay ${menuOpen}`}></div>
+          <div className={`overlay ${menuOpen} secondary`}></div>
           <div className={`text ${menuOpen}`}>
             <h2>Research</h2>
             <h3>Our end-to-end feature set is second to none. </h3>

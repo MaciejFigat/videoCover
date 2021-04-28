@@ -143,12 +143,16 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #977822;
+    background-color: #968043;
     mix-blend-mode: overlay;
     transition: 0.7s;
     &.true {
-        background-color: #924518;
+        background-color: #94542e;
         transition: 0.7s;
+    }
+    &.secondary {
+        background-image: url(../assets/svg/mountains.svg);
+        background-size: cover;
     }
 }
 
@@ -158,16 +162,18 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #977822;
+    background-color: #b4953d;
     background-size: cover;
-    background-image: url(../assets/svg/mountains.svg);
+    background-image: url(../assets/svg/mountainStatic.svg);
+    background-position: 50% 50%;
     mix-blend-mode: overlay;
     transition: 0.7s;
     &.true {
-        
+        background-color: #924518;
         transition: 0.7s;
     }
 }
+
 
 .text {
     position: relative;

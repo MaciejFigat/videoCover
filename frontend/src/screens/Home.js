@@ -3,7 +3,6 @@ import fogMountain from '../assets/fogMountain.mp4'
 import '../styles/Home.scss'
 import { useSelector, useDispatch } from 'react-redux'
 import AnimWrapperSecondary from '../animations/AnimWrapperSecondary'
-import AnimationWrapperLogo from '../animations/AnimationWrapperLogo'
 import { turnVideoOn, turnVideoOff } from '../actions/videoActions'
 
 const Home = () => {
@@ -28,8 +27,8 @@ const Home = () => {
           <header>
             <h2 className='logo'>Maciej Figat</h2>
           </header>
-          {videoOn === true && (
-            <AnimationWrapperLogo>
+          {videoOn === true ? (
+            <>
               <video
                 className='video'
                 src={fogMountain}
@@ -38,11 +37,9 @@ const Home = () => {
                 autoPlay
               ></video>
               <div className={`overlay ${menuOpen} `}></div>
-            </AnimationWrapperLogo>
-          )}
-
-          {videoOn === false && (
-            <div className={`overlayNoVid ${videoOn} `}></div>
+            </>
+          ) : (
+            <div className={`overlayNoVid ${menuOpen} `}></div>
           )}
 
           <div className={`text ${menuOpen}`}>

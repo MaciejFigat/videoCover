@@ -14,7 +14,7 @@ const About = () => {
           <header>
             <h2 className='logo'>Contact me</h2>
           </header>
-          <div className={`overlay ${menuOpen}`}></div>
+          <div className={`overlay ${menuOpen} secondary`}></div>
           <div className={`text ${menuOpen}`}>
             {' '}
             <ContactForm />
