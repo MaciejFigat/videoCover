@@ -19,11 +19,11 @@ const pageVariantsLogo = {
 }
 const pageTransition = {
   type: 'tween',
-  duration: 1,
+  duration: 0.7,
 }
 const pageTransitionLogo = {
   type: 'tween',
-  duration: 1.2,
+  duration: 0.7,
 }
 
 const transition = {

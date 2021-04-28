@@ -61,3 +61,6 @@
 Video by Tobias Bjørkli from Pexels
 
 https://www.pexels.com/video/take-natur-norge-fjell-4870147/
+
+
+mountains - picture by Maciej Figat, converted to svg with the help of [Convertio] (https://convertio.co/)
