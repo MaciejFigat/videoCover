@@ -4,7 +4,14 @@ import '../styles/Home.scss'
 import { useSelector, useDispatch } from 'react-redux'
 import AnimWrapperSecondary from '../animations/AnimWrapperSecondary'
 import { turnVideoOn, turnVideoOff } from '../actions/videoActions'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faEnvelopeSquare,
+  faPauseCircle,
+  faPlayCircle,
+  faUserGraduate,
+} from '@fortawesome/free-solid-svg-icons'
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 const Home = () => {
   const dispatch = useDispatch()
   const menuState = useSelector((state) => state.menuState)
@@ -47,11 +54,11 @@ const Home = () => {
             <h3>
               {videoOn === true ? (
                 <button className='button-play' onClick={videoHandler}>
-                  <i className='far fa-pause-circle'></i> cover
+                  <FontAwesomeIcon icon={faPauseCircle} /> cover
                 </button>
               ) : (
                 <button className='button-play' onClick={videoHandler}>
-                  <i className='far fa-play-circle'></i> cover
+                  <FontAwesomeIcon icon={faPlayCircle} /> cover
                 </button>
               )}
             </h3>
@@ -68,7 +75,7 @@ const Home = () => {
           <ul className='social'>
             <li>
               <a href='https://github.com/MaciejFigat' aria-label='Github'>
-                <i className='fab fa-github-square'></i>
+                <FontAwesomeIcon icon={faGithub} />
               </a>
             </li>
             <li>
@@ -76,20 +83,21 @@ const Home = () => {
                 href='https://www.linkedin.com/in/maciej-figat/'
                 aria-label='Linkedin'
               >
-                <i className='fab fa-linkedin'></i>
+                <FontAwesomeIcon icon={faLinkedin} />
               </a>
             </li>
             <li>
               <a href='/contact' aria-label='contact'>
-                <i className='fas fa-envelope-square'></i>
+                <FontAwesomeIcon icon={faEnvelopeSquare} />
               </a>
             </li>
             <li>
               <a
                 href='https://maciejfigat.github.io/digitalCV/'
-                aria-label='Digital Resume'
+                aria-label='Digital 
+              Resume'
               >
-                <i className='fas fa-user-graduate'></i>
+                <FontAwesomeIcon icon={faUserGraduate} />
               </a>
             </li>
           </ul>
