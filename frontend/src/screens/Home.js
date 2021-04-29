@@ -67,22 +67,28 @@ const Home = () => {
           </div>
           <ul className='social'>
             <li>
-              <a href='https://github.com/MaciejFigat'>
+              <a href='https://github.com/MaciejFigat' aria-label='Github'>
                 <i className='fab fa-github-square'></i>
               </a>
             </li>
             <li>
-              <a href='https://www.linkedin.com/in/maciej-figat/'>
+              <a
+                href='https://www.linkedin.com/in/maciej-figat/'
+                aria-label='Linkedin'
+              >
                 <i className='fab fa-linkedin'></i>
               </a>
             </li>
             <li>
-              <a href='/contact'>
+              <a href='/contact' aria-label='contact'>
                 <i className='fas fa-envelope-square'></i>
               </a>
             </li>
             <li>
-              <a href='https://maciejfigat.github.io/digitalCV/'>
+              <a
+                href='https://maciejfigat.github.io/digitalCV/'
+                aria-label='Digital Resume'
+              >
                 <i className='fas fa-user-graduate'></i>
               </a>
             </li>
