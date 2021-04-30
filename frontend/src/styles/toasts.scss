@@ -26,7 +26,6 @@
     transition: ease-out 0.7s;
     &.none{
         opacity: 0;
-        // display: none;
         right: -100px;
         transition: ease-in 0.3s;
     }

@@ -39,7 +39,6 @@
     top: 20;
     position: absolute;
     left: 20;
-    // z-index: 10;
     text-transform: uppercase;
     cursor: pointer;
 }
@@ -130,7 +129,6 @@
    font-size: 24px;
    color: #111;   
    
-//    z-index: 10;    
 }
 .menu ul li a:hover{    
     color: rgb(32, 135, 175);     
@@ -283,7 +281,6 @@
     font-family: "Lato", sans-serif;
     color: whitesmoke;
     text-align: center;
-    // background: #9199a5;
     background: transparent;
     z-index: 20;
     
@@ -292,7 +289,7 @@
       background: rgb(182, 179, 197);
       transition: 0.5s;
       color:rgb(37, 36, 36);
-    //   box-shadow: 3px 3px 8px #2b5d69;
+   
     } 
     &:active {
       background: rgb(146, 98, 92);

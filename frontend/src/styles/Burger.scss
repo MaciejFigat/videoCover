@@ -20,7 +20,7 @@
     transform: rotate(-45deg) translate(-4.95px, -2.75px);
    
     @media(max-width: 798px) {
-    // transform: rotate(-45deg) translate(-5px, 6px);
+    
     }
   }
   .line2.true {
@@ -30,8 +30,7 @@
   .line3.true {
     height: 4.5px;
     transform: rotate(45deg) translate(-4.95px, 2.75px);
-    // transform: rotate(45deg) translate(-4.65px, -8px);
     @media(max-width: 798px) {
-    // transform: rotate(45deg) translate(-5px, -6px);
+    
     } 
   }

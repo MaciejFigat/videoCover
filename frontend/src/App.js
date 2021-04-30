@@ -7,7 +7,6 @@ import Burger from './components/Burger'
 function App() {
   const location = useLocation()
 
-  //  <AnimatePresence exitBeforeEnter> with this props, framer will wait with the animation till the previous one has left
   return (
     <>
       <AnimatePresence>
