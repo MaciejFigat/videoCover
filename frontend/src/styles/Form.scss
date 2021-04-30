@@ -19,6 +19,7 @@
     text-align: left;
      label {
         color:rgb(40, 179, 179);
+        font-weight: 700;
     }
     &:after{
         content: "";
@@ -41,9 +42,13 @@
 
 
 .contact_field_content {
+    &::placeholder {
+        color: #379595;
+        font-weight: 300;
+      }
     outline: none;
     border: none;   
-    color: rgba(245, 245, 245, 0.712);
+    color: rgba(76, 229, 240, 0.883);
     background: none;
     line-height: 1.2;
     cursor: text;
