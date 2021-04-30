@@ -5,7 +5,8 @@ import emailjs from 'emailjs-com'
 import Toast from '../components/Toast'
 import '../styles/Form.scss'
 import '../styles/button.scss'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSave } from '@fortawesome/free-solid-svg-icons'
 const ContactForm = () => {
   const dispatch = useDispatch()
 
@@ -122,7 +123,7 @@ const ContactForm = () => {
         </form>
         <div className='send_button_wrapper'>
           <button className='send_button' onClick={messageSaveHandler}>
-            <i className='fas fa-save'></i>
+            <FontAwesomeIcon icon={faSave} />
           </button>
           <button className='send_button' onClick={messageResetHandler}>
             reset
