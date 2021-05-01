@@ -55,10 +55,8 @@
     height: 45px;
     font-size: 15px;
     line-height: 1.2;
-    border-bottom: 2px solid #adadad;
     padding: 0.8rem 1.2rem;
     min-width: 60vw;
- 
     margin-bottom: 20px;
     transition: 0.9s;   
     &.true {
@@ -73,8 +71,8 @@
         animation: 10s rotate linear infinite;    
     }
     @media (max-width: 798px) {
-        min-width: 69vw;
-       
+        min-width: 67vw;
+      
     }
 }
 
@@ -83,6 +81,9 @@
     min-height: 25vh;
     resize: none;
     overflow-y: auto;
+    @media(max-width: 798px) {
+      min-height: 30vh;
+  }
 }
 
  

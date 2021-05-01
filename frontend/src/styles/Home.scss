@@ -18,7 +18,12 @@
         transition: 0.4s;
         @media(max-width: 798px) {
             right: 260px;
-            }
+        }
+    }
+    @media(max-width: 798px) {
+        padding: 20px;
+        
+        
     }
     
 }
@@ -177,6 +182,7 @@
     position: relative;
     z-index: 1;
     transition: 0.7s;
+    
     &.true {
         opacity: 0.8;
         @media(min-width: 1040px) {
@@ -188,6 +194,9 @@
            
         }
        
+    }
+    @media(max-width: 798px) {
+    
     }
 }
 

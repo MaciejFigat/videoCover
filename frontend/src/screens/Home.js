@@ -62,7 +62,7 @@ const Home = () => {
                 </button>
               )}
             </h3>
-            <h3>Here you can find me and my recent works.</h3>
+            <h3>Here you can find me and my recent works</h3>
             <p>
               I intend to share some cool, yet easy to implement, tricks and
               methods I used recently in React development.
