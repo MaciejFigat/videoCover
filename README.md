@@ -64,3 +64,7 @@ https://www.pexels.com/video/take-natur-norge-fjell-4870147/
 
 
 mountains - picture by Maciej Figat, converted to svg with the help of [Convertio] (https://convertio.co/)
+
+trainer.svg - based on an image by [fzsbm](https://pixabay.com/users/fzsbm-2325554/)  from Pixabay 
+
+trainer.svg - based on an image by [Michal Renčo from Pixabay] (https://pixabay.com/nl/users/mikewildadventure-3422441/)

@@ -20,10 +20,26 @@ const Projects = () => {
 
             {projectsData.map((project) => (
               <div key={project.id}>
-                <h3>{project.title}</h3>
+                <h3 style={{ color: `${project.color}` }}>{project.title}</h3>
+                <img
+                  src={project.picture}
+                  width='200px'
+                  style={{ borderRadius: '45%' }}
+                  alt='teaser'
+                />
                 <p>{project.description}</p>
-                <a href={project.link}>Visit it live</a>
-                <a href={project.githubLink}>Code on Github</a>
+                <a
+                  href={project.link}
+                  style={{ background: `${project.color}` }}
+                >
+                  Visit it live
+                </a>
+                <a
+                  href={project.githubLink}
+                  style={{ background: `${project.color}` }}
+                >
+                  Code on Github
+                </a>
               </div>
             ))}
           </div>
@@ -34,5 +50,3 @@ const Projects = () => {
 }
 
 export default Projects
-// img for later
-// <img src={project.picture} alt='teaser picture' />
