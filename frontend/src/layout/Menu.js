@@ -42,12 +42,12 @@ const Menu = () => {
           <li>
             <NavLink
               exact
-              to='/misc'
+              to='/projects'
               className='nav_link'
               activeClassName='nav_link_active'
               onClick={handleClickMenu}
             >
-              Misc
+              Projects
             </NavLink>
           </li>
           <li>
