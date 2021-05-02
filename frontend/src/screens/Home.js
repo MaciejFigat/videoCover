@@ -51,7 +51,7 @@ const Home = () => {
 
           <div className={`text ${menuOpen}`}>
             <h2>Welcome </h2>
-            <h3>
+            <h4>
               {videoOn === true ? (
                 <button className='button-play' onClick={videoHandler}>
                   <FontAwesomeIcon icon={faPauseCircle} /> cover
@@ -61,7 +61,7 @@ const Home = () => {
                   <FontAwesomeIcon icon={faPlayCircle} /> cover
                 </button>
               )}
-            </h3>
+            </h4>
             <h3>Here you can find me and my recent works</h3>
             <p>
               I intend to share some cool, yet easy to implement, tricks and
