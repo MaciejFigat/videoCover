@@ -40,6 +40,12 @@ const Projects = () => {
                 >
                   Code on Github
                 </a>
+                <a
+                  href={project.readmeLink}
+                  style={{ background: `${project.color}` }}
+                >
+                  Documentation
+                </a>
               </div>
             ))}
           </div>
