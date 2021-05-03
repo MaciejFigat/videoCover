@@ -253,7 +253,11 @@
 }
 
 .text a:hover {
-    background: blanchedalmond;
+    background: blanchedalmond !important;
+    
+}
+.text a:active {
+    background: rgb(219, 192, 151) !important;
     
 }
 .social {
@@ -331,3 +335,4 @@
     }
         
 }
+
