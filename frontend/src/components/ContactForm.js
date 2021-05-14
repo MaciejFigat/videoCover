@@ -4,7 +4,7 @@ import { messageChange, messageReset } from '../actions/messageActions'
 import emailjs from 'emailjs-com'
 import Toast from '../components/Toast'
 import '../styles/Form.scss'
-import '../styles/Button.scss'
+import '../styles/button.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSave } from '@fortawesome/free-solid-svg-icons'
 const ContactForm = () => {
