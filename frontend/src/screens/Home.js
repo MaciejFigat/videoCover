@@ -1,6 +1,6 @@
 import React from 'react'
 import fogMountain from '../assets/fogMountain.mp4'
-import '../styles/Home.scss'
+import '../styles/home.scss'
 import { useSelector, useDispatch } from 'react-redux'
 import AnimWrapperSecondary from '../animations/AnimWrapperSecondary'
 import { turnVideoOn, turnVideoOff } from '../actions/videoActions'

@@ -1,3 +1,4 @@
+// import React, { useState } from 'react'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
@@ -8,11 +9,16 @@ const Menu = () => {
   const menuState = useSelector((state) => state.menuState)
   const { menuOpen } = menuState
 
+  // const [open, setOpen] = useState(false)
+
   const handleClickMenu = () => {
     if (menuOpen === true) {
       dispatch(closeMenu())
     }
   }
+  // const handleClickMenu = () => {
+  //   setOpen(!open)
+  // }
   return (
     <>
       <div className={`menu ${menuOpen}`}>

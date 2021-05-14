@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/Burger.scss'
+import '../styles/burger.scss'
 import { useDispatch, useSelector } from 'react-redux'
 import { openMenu, closeMenu } from '../actions/menuActions'
 const Burger = () => {

@@ -19,7 +19,7 @@ const pageVariantsLogo = {
 }
 const pageTransition = {
   type: 'tween',
-  duration: 0.7,
+  duration: 0.5,
 }
 const pageTransitionLogo = {
   type: 'tween',
@@ -27,7 +27,7 @@ const pageTransitionLogo = {
 }
 
 const transition = {
-  duration: 1,
+  duration: 0.5,
   ease: [0.43, 0.13, 0.23, 0.96],
 }
 

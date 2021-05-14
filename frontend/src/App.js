@@ -1,4 +1,4 @@
-import './styles/App.scss'
+import './styles/app.scss'
 import { Switch, Route, useLocation } from 'react-router-dom'
 import { Home, About, Projects, Contact } from './screens'
 import { AnimatePresence } from 'framer-motion'

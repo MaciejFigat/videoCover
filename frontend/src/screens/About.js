@@ -5,11 +5,11 @@ import { NavLink } from 'react-router-dom'
 const About = () => {
   const menuState = useSelector((state) => state.menuState)
   const { menuOpen } = menuState
+  // <div className={`overlay ${menuOpen} secondary`}></div>
 
   return (
     <AnimWrapperSecondary>
       <section className={`showcase ${menuOpen}`}>
-        <div className={`overlay ${menuOpen} secondary`}></div>
         <div className={`text ${menuOpen}`}>
           <h2>React + EmailJS</h2>
           <h3>Sending an email through a form with EmailJS intermediary.</h3>
