@@ -1,27 +1,24 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import ContactForm from '../components/ContactForm'
-import AnimWrapperSecondary from '../animations/AnimWrapperSecondary'
+import MainWrapper from '../components/MainWrapper'
+
 const About = () => {
   const menuState = useSelector((state) => state.menuState)
   const { menuOpen } = menuState
 
   return (
-    <>
-      <AnimWrapperSecondary>
-        <section className={`showcase ${menuOpen}`}>
-          <div className={`overlay ${menuOpen}`}></div>
-          <header>
-            <h2 className='logo'>Contact me</h2>
-          </header>
+    <MainWrapper>
+      <div className={`overlay ${menuOpen}`}></div>
+      <header>
+        <h2 className='logo'>Contact me</h2>
+      </header>
 
-          <div className={`text ${menuOpen}`}>
-            {' '}
-            <ContactForm />
-          </div>
-        </section>
-      </AnimWrapperSecondary>
-    </>
+      <div className={`text ${menuOpen}`}>
+        {' '}
+        <ContactForm />
+      </div>
+    </MainWrapper>
   )
 }
 
