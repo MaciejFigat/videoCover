@@ -93,6 +93,12 @@
     background-color: rgb(36, 81, 206);
     border-radius: 50%;
     transition: 0.7s;
+    @media(max-width: 330px) {
+        top: 5px;
+        right: 25px;
+        margin-right: 0px;
+        
+        }
     &.true {
         background-color: #92185b;
         transition: 0.7s;

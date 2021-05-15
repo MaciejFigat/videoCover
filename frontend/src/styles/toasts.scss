@@ -28,6 +28,10 @@
         opacity: 0;
         right: -100px;
         transition: ease-in 0.3s;
+        @media(max-width: 330px) {
+            right: -30px;
+            
+            }
     }
     &.success{
         background-color: rgb(57, 214, 84);
