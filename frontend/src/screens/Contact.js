@@ -11,7 +11,7 @@ const About = () => {
     <MainWrapper>
       <div className={`overlay ${menuOpen}`}></div>
       <header>
-        <h2 className='logo'>Contact me</h2>
+        <h2 className='logo'>Send me an email</h2>
       </header>
 
       <div className={`text ${menuOpen}`}>
