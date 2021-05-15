@@ -10,13 +10,11 @@ const Projects = () => {
   return (
     <MainWrapper>
       <header>
-        <h2 className='logo'>Projects</h2>
+        <h2 className='logo'>Recent works</h2>
       </header>
       <div className={`overlay ${menuOpen}`}></div>
 
       <div className={`text ${menuOpen}`}>
-        <h2>Recent works</h2>
-
         <ProjectExample projectsData={projectsData} />
       </div>
     </MainWrapper>
