@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { messageChange, messageReset } from '../actions/messageActions'
 import emailjs from 'emailjs-com'
-import Toast from '../components/Toast'
+// import Toast from '../components/Toast'
 import '../styles/Form.scss'
 import '../styles/button.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -25,18 +25,18 @@ const ContactForm = () => {
   const [email, setEmail] = useState('')
   const [formMessage, setFormMessage] = useState('')
   const [toastVersion, setToastVersion] = useState('none')
-  const [toastMessage, setToastMessage] = useState('')
+  // const [toastMessage, setToastMessage] = useState('')
 
   const messageSaveHandler = (e) => {
     e.preventDefault()
     setToastVersion('saved')
-    setToastMessage('Data stored in the app')
+    // setToastMessage('Data stored in the app')
     dispatch(messageChange({ name, email, message: formMessage }))
   }
   const messageResetHandler = (e) => {
     e.preventDefault()
     setToastVersion('reset')
-    setToastMessage('Data reset')
+    // setToastMessage('Data reset')
     dispatch(messageReset())
   }
 
@@ -58,18 +58,18 @@ const ContactForm = () => {
     emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, EMAILJS_ID).then(
       function () {
         setToastVersion('success')
-        setToastMessage('Message sent!')
+        // setToastMessage('Message sent!')
       },
       function () {
         setToastVersion('failure')
-        setToastMessage('Message was lost ;-(')
+        // setToastMessage('Message was lost ;-(')
       }
     )
   }
-  const toastNone = (e) => {
-    e.preventDefault()
-    setToastVersion('none')
-  }
+  // const toastNone = (e) => {
+  //   e.preventDefault()
+  //   setToastVersion('none')
+  // }
 
   useEffect(() => {
     if (userMessageSaved) {
@@ -130,10 +130,11 @@ const ContactForm = () => {
           </button>
         </div>
       </div>
-      <div onClick={toastNone}>
-        <Toast toastMessage={toastMessage} toastVersion={toastVersion} />
-      </div>
     </>
   )
 }
 export default ContactForm
+
+// <div onClick={toastNone}>
+//           <Toast toastMessage={toastMessage} toastVersion={toastVersion} />
+//         </div>
