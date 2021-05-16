@@ -7,11 +7,11 @@
     flex-direction: column;
     align-items: flex-end;
     transition: 0.7s;
-    &.true{
-    right: 10px;
-    top: -55px;
-    transition: 0.7s;
-    }
+    // &.true{
+    // right: 10px;
+    // top: -55px;
+    // transition: 0.7s;
+    // }
 }
 
 .toast {
@@ -20,13 +20,13 @@
     color:rgb(15, 13, 10); 
     border-radius: 5px;
     padding: 1rem 1rem; 
-    margin: 0.5rem;
+    // margin: 0.5rem;
     min-width: fit-content;
     z-index: 12;
     transition: ease-out 0.7s;
     &.none{
         opacity: 0;
-        right: -100px;
+        right: -20px;
         transition: ease-in 0.3s;
         @media(max-width: 390px) {
             right: 0px;
