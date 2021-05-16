@@ -91,13 +91,12 @@ const ContactForm = () => {
           <div className='contact_field'>
             <label> name: </label>
             <input
-              className={`contact_field_content ${menuOpen}`}
+              className={`contact_field_content`}
               type='text'
               value={name}
               placeholder='your name'
               onChange={(e) => setName(e.target.value)}
             />
-            <span className='span_input2' data-placeholder='NAME'></span>
           </div>
           <div className='contact_field'>
             <label>email:</label>
@@ -108,7 +107,6 @@ const ContactForm = () => {
               placeholder='your email'
               onChange={(e) => setEmail(e.target.value)}
             />
-            <span className='span_input2' data-placeholder='NAME'></span>
           </div>
           <div className='contact_field'>
             <label> message:</label>
@@ -118,7 +116,6 @@ const ContactForm = () => {
               placeholder='message me'
               onChange={(e) => setFormMessage(e.target.value)}
             ></textarea>
-            <span className='span_input2' data-placeholder='NAME'></span>
           </div>{' '}
         </form>
         <div className='send_button_wrapper'>
@@ -134,11 +131,7 @@ const ContactForm = () => {
         </div>
       </div>
       <div onClick={toastNone}>
-        <Toast
-          toastMessage={toastMessage}
-          menuOpen={menuOpen}
-          toastVersion={toastVersion}
-        />
+        <Toast toastMessage={toastMessage} toastVersion={toastVersion} />
       </div>
     </>
   )
